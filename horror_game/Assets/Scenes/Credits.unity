@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &912004166
+--- !u!1001 &1090719308
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -180,7 +180,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ecf04e9c1a260d45a97c835272b78cc, type: 3}
---- !u!1001 &262273734116323296
+--- !u!1001 &1655239764
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -191,14 +191,6 @@ PrefabInstance:
     - target: {fileID: 5461836373745659778, guid: c9b9fa5bd402d9a418c0ab4840c091a8, type: 3}
       propertyPath: m_Name
       value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5787747296766449399, guid: c9b9fa5bd402d9a418c0ab4840c091a8, type: 3}
-      propertyPath: sfxSounds.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5787747296766449399, guid: c9b9fa5bd402d9a418c0ab4840c091a8, type: 3}
-      propertyPath: musicSounds.Array.size
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8291229743988013096, guid: c9b9fa5bd402d9a418c0ab4840c091a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -249,5 +241,5 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 912004166}
-  - {fileID: 262273734116323296}
+  - {fileID: 1090719308}
+  - {fileID: 1655239764}
