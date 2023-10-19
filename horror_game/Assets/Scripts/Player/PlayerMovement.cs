@@ -8,9 +8,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float walkSpeed = 5f;
-    [SerializeField] float jumpSpeed = 20f;
+    [SerializeField] float jumpForce = 20f;
     public float accelerationSpeed = 3f;
     public float decelerationSpeed = 3f;
+    private bool isFacingRight = true;
     // public LayerMask groundLayers;
     private bool isSprinting = false;
     public int stamina = 10;
@@ -33,9 +34,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
             Run();
-            FlipSprite();
+
             if(Input.GetButtonDown("Jump")) {
-                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpSpeed);
+                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
                 Debug.Log("Jump"); 
 
                 // if (myCapsuleCollider.IsTouchingLayers(groundLayers))
@@ -43,6 +44,12 @@ public class PlayerMovement : MonoBehaviour
 
                 // }
             }
+    }
+
+    void FixedUpdate() 
+    {
+        myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, Mathf.Clamp(myRigidbody.velocity.y, -decelerationSpeed, decelerationSpeed * 5));
+        TurnCheck();
     }
 
     void OnMove(InputValue value)
@@ -73,15 +80,38 @@ public class PlayerMovement : MonoBehaviour
         myAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
     }
 
-    void FlipSprite()
+    private void TurnCheck()
     {
-        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
-
-        if (playerHasHorizontalSpeed)
+        if (moveInput.x > 0 && !isFacingRight)
         {
-            transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
+            Flip();
+        }
+        else if (moveInput.x < 0 && isFacingRight)
+        {
+            Flip();
         }
     }
+
+    void Flip()
+    {
+        // bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+
+        // if (playerHasHorizontalSpeed)
+        // {
+        //     transform.localRotation = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
+        // }
+        if (isFacingRight) {             
+            Vector3 rotator = new Vector3(transform.rotation.x, 180f, transform.rotation.z);
+            transform.rotation = Quaternion.Euler(rotator);
+            isFacingRight = !isFacingRight;
+        } else {
+            Vector3 rotator = new Vector3(transform.rotation.x, 0f, transform.rotation.z);
+            transform.rotation = Quaternion.Euler(rotator);
+            isFacingRight = !isFacingRight;
+        }
+
+    }
+
     void isSprinting1 ()
     {
         if (isSprinting == true)
