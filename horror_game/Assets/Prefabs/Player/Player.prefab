@@ -185,12 +185,12 @@ Rigidbody2D:
   m_GameObject: {fileID: 3330713563523630136}
   m_BodyType: 0
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_Mass: 1.52
+  m_LinearDrag: 1.71
+  m_AngularDrag: 1.2
+  m_GravityScale: 1.51
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -214,9 +214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc4e3de1a90e6df42a93f0cb499e16fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 10
-  walkSpeed: 5
-  jumpSpeed: 8
-  Sprinting: 0
-  Stamina: 10
-  StaminaRegen: 0
+  runSpeed: 12.08
+  walkSpeed: 5.43
+  jumpSpeed: 7.98
+  accelerationSpeed: 5
+  decelerationSpeed: 3
+  stamina: 10

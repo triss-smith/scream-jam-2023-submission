@@ -2,15 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Debug = UnityEngine.Debug;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float walkSpeed = 5f;
-    [SerializeField] float jumpSpeed = 5f;
-    public bool Sprinting = false;
-    public int Stamina = 10;
-    public bool StaminaRegen = false;
+    [SerializeField] float jumpSpeed = 20f;
+    public float accelerationSpeed = 3f;
+    public float decelerationSpeed = 3f;
+    // public LayerMask groundLayers;
+    private bool isSprinting = false;
+    public int stamina = 10;
+    private bool staminaRegen = false;
+    private float currentSpeed;
 
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
@@ -27,11 +32,17 @@ public class PlayerMovement : MonoBehaviour
    
     void Update()
     {
-        Debug.Log("dialog active" + DialogBehavior.textActive);
-        if (!DialogBehavior.textActive) {
             Run();
             FlipSprite();
-        }
+            if(Input.GetButtonDown("Jump")) {
+                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpSpeed);
+                Debug.Log("Jump"); 
+
+                // if (myCapsuleCollider.IsTouchingLayers(groundLayers))
+                // {
+
+                // }
+            }
     }
 
     void OnMove(InputValue value)
@@ -39,27 +50,24 @@ public class PlayerMovement : MonoBehaviour
         moveInput = value.Get<Vector2>();   
     }
 
-    void OnJump(InputValue value)
-    {
-        if (!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
-        if(value.isPressed)
-        {
-            myRigidbody.velocity += new Vector2(0f, jumpSpeed);
-        }
-    }
-
     void Run()
     {
-        if (Input.GetKey(KeyCode.LeftShift) == false)
+        float moveInputX = Input.GetAxis("Horizontal");
+
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            myRigidbody.velocity = new Vector2(moveInput.x * walkSpeed, myRigidbody.velocity.y);
+            isSprinting = true;
+            currentSpeed = currentSpeed = Mathf.MoveTowards(currentSpeed, runSpeed, accelerationSpeed * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.LeftShift) && Stamina > 0 && StaminaRegen == false)
+        else
         {
-            myRigidbody.velocity = new Vector2(moveInput.x * runSpeed, myRigidbody.velocity.y);
-            Sprinting = true;
-            Sprinting1();
+            isSprinting = false;
+            currentSpeed = currentSpeed = Mathf.MoveTowards(currentSpeed, walkSpeed, accelerationSpeed * Time.deltaTime);
         }
+
+        float moveSpeedX = currentSpeed * moveInputX;
+
+        myRigidbody.velocity = new Vector2(moveSpeedX, myRigidbody.velocity.y);
 
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
         myAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
@@ -74,37 +82,37 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
         }
     }
-    void Sprinting1 ()
+    void isSprinting1 ()
     {
-        if (Sprinting == true)
+        if (isSprinting == true)
         {
-            StartCoroutine(Sprinting2 ());
+            StartCoroutine(isSprinting2 ());
         }
     }
 
-    IEnumerator Sprinting2 ()
+    IEnumerator isSprinting2 ()
     {
         yield return new WaitForSeconds(1);
-        Stamina -= 1;
-        Sprinting1();
+        stamina -= 1;
+        isSprinting1();
     }
 
-    void StaminaRegen1 ()
+    void staminaRegen1 ()
     {
-        if (Stamina == 10)
+        if (stamina == 10)
         {
-            StaminaRegen = false;
+            staminaRegen = false;
         }
-        else if (StaminaRegen == true)
+        else if (staminaRegen == true)
         {
-            StartCoroutine(StaminaRegen2 ());
+            StartCoroutine(staminaRegen2 ());
         }
     }
 
-    IEnumerator StaminaRegen2 ()
+    IEnumerator staminaRegen2 ()
     {
         yield return new WaitForSeconds(1);
-        Stamina += 1;
-        StaminaRegen1();
+        stamina += 1;
+        staminaRegen1();
     }
 }
