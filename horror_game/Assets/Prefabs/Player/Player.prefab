@@ -78,7 +78,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,8 +96,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -144505821
-  m_SortingLayer: 0
+  m_SortingLayerID: 1374275969
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1017205738, guid: 936a45c8cf9368d4faef886ed9191623, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -190,7 +190,7 @@ Rigidbody2D:
   m_Mass: 1.52
   m_LinearDrag: 1.71
   m_AngularDrag: 1.2
-  m_GravityScale: 5
+  m_GravityScale: 6
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -214,9 +214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc4e3de1a90e6df42a93f0cb499e16fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 12.08
-  walkSpeed: 5.43
-  jumpForce: 20
-  accelerationSpeed: 5
-  decelerationSpeed: 3
+  runSpeed: 9.9
+  walkSpeed: 7.97
+  jumpForce: 22.1
+  accelerationSpeed: 3.86
+  decelerationSpeed: 12.48
   stamina: 10
