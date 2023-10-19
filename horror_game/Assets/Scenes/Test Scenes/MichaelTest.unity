@@ -139,6 +139,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EyeStalk
       objectReference: {fileID: 0}
+    - target: {fileID: 8645211287568276958, guid: f04315b06ad71d042b244dbcc98e371b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645211287568276958, guid: f04315b06ad71d042b244dbcc98e371b, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8865023907996489576, guid: f04315b06ad71d042b244dbcc98e371b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.35
@@ -241,6 +249,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crow
       objectReference: {fileID: 0}
+    - target: {fileID: 7518616158943939092, guid: 4b52b36f66b451148b1b90c87cb5f409, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518616158943939092, guid: 4b52b36f66b451148b1b90c87cb5f409, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -263,6 +279,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1487276253}
+    - target: {fileID: 2710386984555827884, guid: 3c80b59e080b0554196b518d6fa6cc59, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3154030896819370878, guid: 3c80b59e080b0554196b518d6fa6cc59, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.0018597
@@ -306,6 +326,14 @@ PrefabInstance:
     - target: {fileID: 3944071221754018391, guid: 3c80b59e080b0554196b518d6fa6cc59, type: 3}
       propertyPath: m_Name
       value: SkullTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944071221754018391, guid: 3c80b59e080b0554196b518d6fa6cc59, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944071221754018391, guid: 3c80b59e080b0554196b518d6fa6cc59, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -455,7 +483,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1035697016211754197, guid: 665ad05744ba1e8439907138df2f35c0, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1035697016211754197, guid: 665ad05744ba1e8439907138df2f35c0, type: 3}
       propertyPath: m_SortingLayerID
@@ -536,7 +564,7 @@ GameObject:
   - component: {fileID: 1956968890}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -667,7 +695,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1946165183
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.4245283, g: 0.31439126, b: 0.31439126, a: 1}

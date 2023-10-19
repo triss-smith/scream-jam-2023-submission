@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
 namespace SVS.AI
 {
 public class AiPlayerEnterAreaDetector : MonoBehaviour
@@ -36,3 +37,4 @@ public class AiPlayerEnterAreaDetector : MonoBehaviour
 }
 }
 }
+*/
