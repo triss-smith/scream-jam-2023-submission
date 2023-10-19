@@ -38,8 +38,29 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background_5
+    uniqueID: 2813215009
+    locked: 0
+  - name: Background_4
+    uniqueID: 1100747491
+    locked: 0
+  - name: Background_3
+    uniqueID: 2941026227
+    locked: 0
+  - name: Background_2
+    uniqueID: 86899125
+    locked: 0
+  - name: Background_1
+    uniqueID: 1152690279
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Platforms
+    uniqueID: 778400581
+    locked: 0
+  - name: Player
+    uniqueID: 1374275969
     locked: 0
   - name: Foreground_1
     uniqueID: 3700749023
@@ -49,27 +70,6 @@ TagManager:
     locked: 0
   - name: Foreground_3
     uniqueID: 1796472217
-    locked: 0
-  - name: Platforms
-    uniqueID: 778400581
-    locked: 0
-  - name: Background_1
-    uniqueID: 1152690279
-    locked: 0
-  - name: Background_2
-    uniqueID: 86899125
-    locked: 0
-  - name: Background_3
-    uniqueID: 2941026227
-    locked: 0
-  - name: Background_4
-    uniqueID: 1100747491
-    locked: 0
-  - name: Background_5
-    uniqueID: 2813215009
-    locked: 0
-  - name: Player
-    uniqueID: 1374275969
     locked: 0
   - name: Enemy
     uniqueID: 384032459
