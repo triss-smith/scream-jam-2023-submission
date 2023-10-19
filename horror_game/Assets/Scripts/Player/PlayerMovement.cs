@@ -2,15 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Debug = UnityEngine.Debug;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float walkSpeed = 5f;
-    [SerializeField] float jumpSpeed = 5f;
-    public bool Sprinting = false;
-    public int Stamina = 10;
-    public bool StaminaRegen = false;
+    [SerializeField] float jumpForce = 20f;
+    public float accelerationSpeed = 3f;
+    public float decelerationSpeed = 3f;
+    private bool isFacingRight = true;
+    // public LayerMask groundLayers;
+    private bool isSprinting = false;
+    public int stamina = 10;
+    private bool staminaRegen = false;
+    private float currentSpeed;
 
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
@@ -27,11 +33,23 @@ public class PlayerMovement : MonoBehaviour
    
     void Update()
     {
-        Debug.Log("dialog active" + DialogBehavior.textActive);
-        if (!DialogBehavior.textActive) {
             Run();
-            FlipSprite();
-        }
+
+            if(Input.GetButtonDown("Jump")) {
+                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
+                Debug.Log("Jump"); 
+
+                // if (myCapsuleCollider.IsTouchingLayers(groundLayers))
+                // {
+
+                // }
+            }
+    }
+
+    void FixedUpdate() 
+    {
+        myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, Mathf.Clamp(myRigidbody.velocity.y, -decelerationSpeed, decelerationSpeed * 5));
+        TurnCheck();
     }
 
     void OnMove(InputValue value)
@@ -39,72 +57,92 @@ public class PlayerMovement : MonoBehaviour
         moveInput = value.Get<Vector2>();   
     }
 
-    void OnJump(InputValue value)
-    {
-        if (!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
-        if(value.isPressed)
-        {
-            myRigidbody.velocity += new Vector2(0f, jumpSpeed);
-        }
-    }
-
     void Run()
     {
-        if (Input.GetKey(KeyCode.LeftShift) == false)
+        float moveInputX = Input.GetAxis("Horizontal");
+
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            myRigidbody.velocity = new Vector2(moveInput.x * walkSpeed, myRigidbody.velocity.y);
+            isSprinting = true;
+            currentSpeed = currentSpeed = Mathf.MoveTowards(currentSpeed, runSpeed, accelerationSpeed * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.LeftShift) && Stamina > 0 && StaminaRegen == false)
+        else
         {
-            myRigidbody.velocity = new Vector2(moveInput.x * runSpeed, myRigidbody.velocity.y);
-            Sprinting = true;
-            Sprinting1();
+            isSprinting = false;
+            currentSpeed = currentSpeed = Mathf.MoveTowards(currentSpeed, walkSpeed, accelerationSpeed * Time.deltaTime);
         }
+
+        float moveSpeedX = currentSpeed * moveInputX;
+
+        myRigidbody.velocity = new Vector2(moveSpeedX, myRigidbody.velocity.y);
 
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
         myAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
     }
 
-    void FlipSprite()
+    private void TurnCheck()
     {
-        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
-
-        if (playerHasHorizontalSpeed)
+        if (moveInput.x > 0 && !isFacingRight)
         {
-            transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
+            Flip();
         }
-    }
-    void Sprinting1 ()
-    {
-        if (Sprinting == true)
+        else if (moveInput.x < 0 && isFacingRight)
         {
-            StartCoroutine(Sprinting2 ());
+            Flip();
         }
     }
 
-    IEnumerator Sprinting2 ()
+    void Flip()
+    {
+        // bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+
+        // if (playerHasHorizontalSpeed)
+        // {
+        //     transform.localRotation = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
+        // }
+        if (isFacingRight) {             
+            Vector3 rotator = new Vector3(transform.rotation.x, 180f, transform.rotation.z);
+            transform.rotation = Quaternion.Euler(rotator);
+            isFacingRight = !isFacingRight;
+        } else {
+            Vector3 rotator = new Vector3(transform.rotation.x, 0f, transform.rotation.z);
+            transform.rotation = Quaternion.Euler(rotator);
+            isFacingRight = !isFacingRight;
+        }
+
+    }
+
+    void isSprinting1 ()
+    {
+        if (isSprinting == true)
+        {
+            StartCoroutine(isSprinting2 ());
+        }
+    }
+
+    IEnumerator isSprinting2 ()
     {
         yield return new WaitForSeconds(1);
-        Stamina -= 1;
-        Sprinting1();
+        stamina -= 1;
+        isSprinting1();
     }
 
-    void StaminaRegen1 ()
+    void staminaRegen1 ()
     {
-        if (Stamina == 10)
+        if (stamina == 10)
         {
-            StaminaRegen = false;
+            staminaRegen = false;
         }
-        else if (StaminaRegen == true)
+        else if (staminaRegen == true)
         {
-            StartCoroutine(StaminaRegen2 ());
+            StartCoroutine(staminaRegen2 ());
         }
     }
 
-    IEnumerator StaminaRegen2 ()
+    IEnumerator staminaRegen2 ()
     {
         yield return new WaitForSeconds(1);
-        Stamina += 1;
-        StaminaRegen1();
+        stamina += 1;
+        staminaRegen1();
     }
 }
