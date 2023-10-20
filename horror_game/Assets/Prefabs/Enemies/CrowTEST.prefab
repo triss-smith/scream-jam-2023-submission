@@ -174,9 +174,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7a3ddd4b1952aa47b1a30080459c57a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalPatrolDistance: 5
-  horizontalPatrolSpeed: 2
-  verticalPatrolDistance: 2
-  verticalPatrolSpeed: 1
-  detectionRange: 5
+  horizontalPatrolDistance: 20
+  horizontalPatrolSpeed: 4
+  verticalPatrolMinDistance: 6
+  verticalPatrolMaxDistance: -6
+  verticalPatrolSpeed: 2
+  detectionRange: 7.35
   followSpeed: 5

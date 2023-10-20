@@ -103,7 +103,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -127,8 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47f6d37386ff1d4a8644c787897f12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  detectionRange: 5
+  moveSpeed: 4
+  detectionRange: 17
   playerObject: {fileID: 0}
 --- !u!68 &5057408187443731016
 EdgeCollider2D:
@@ -185,13 +185,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <playerDetected>k__BackingField: 0
   detectorOrigin: {fileID: 3154030896819370878}
-  detectorSize: {x: 7, y: 2.68}
-  detectorOffset: {x: 0, y: -2.97}
+  detectorSize: {x: 17, y: 9.27}
+  detectorOffset: {x: 0, y: 0.02}
   detectionDelay: 0.3
   detectionLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 1}
+  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 0.08627451}
   gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
   showGizmos: 1
   target: {fileID: 0}
