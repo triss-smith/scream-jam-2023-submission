@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 194982867559600495}
   - component: {fileID: 340698258351594016}
   - component: {fileID: 7590430999461421451}
+  - component: {fileID: -3939298551940951449}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -215,8 +216,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 9.9
-  walkSpeed: 7.97
   jumpForce: 22.1
+  maxJumpTime: 0.2
   accelerationSpeed: 3.86
   decelerationSpeed: 12.48
-  stamina: 10
+  isJumping: 0
+  maxSneakDuration: 5
+  sneakObject: {fileID: 0}
+--- !u!58 &-3939298551940951449
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3330713563523630136}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1, y: 0}
+  serializedVersion: 2
+  m_Radius: 4
