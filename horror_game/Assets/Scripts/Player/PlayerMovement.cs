@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded = true;
     private float jumpTimeCounter;
     public bool isJumping;
+    public float maxSneakDuration = 5.0f; // Maximum duration for sneaking in seconds
+    public GameObject sneakObject; //
    
     private float currentSpeed;
 
