@@ -6,16 +6,20 @@ using Debug = UnityEngine.Debug;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float runSpeed = 10f;
-    [SerializeField] float walkSpeed = 5f;
+    [SerializeField] float runSpeed = 7.97f;
     [SerializeField] float jumpForce = 20f;
+    public float maxJumpTime = 0.2f;
+
+
     public float accelerationSpeed = 3f;
     public float decelerationSpeed = 3f;
     private bool isFacingRight = true;
     // public LayerMask groundLayers;
     private bool isSprinting = false;
-    public int stamina = 10;
-    private bool staminaRegen = false;
+    private bool isGrounded = true;
+    private float jumpTimeCounter;
+    public bool isJumping;
+   
     private float currentSpeed;
 
     Vector2 moveInput;
@@ -33,17 +37,50 @@ public class PlayerMovement : MonoBehaviour
    
     void Update()
     {
-            Run();
+        Run();
 
-            if(Input.GetButtonDown("Jump")) {
-                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
-                Debug.Log("Jump"); 
+        if (isGrounded) {
+            jumpTimeCounter = maxJumpTime;  // Reset jump time counter when grounded.
+            isJumping = false;
+        }
 
-                // if (myCapsuleCollider.IsTouchingLayers(groundLayers))
-                // {
+        if (Input.GetButtonDown("Jump") && isGrounded) {
+            Jump();
+        }
 
-                // }
-            }
+        if (Input.GetButton("Jump") && isJumping) {
+            ContinueJump();
+        }
+
+        if (Input.GetButtonUp("Jump")) {
+            isJumping = false;
+        }
+    }
+
+    void Jump() 
+    {
+        myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
+        isJumping = true;
+        StartCoroutine(EndJump());
+    }
+
+    void ContinueJump()
+    {
+        if (isJumping)
+        {
+            myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
+        }
+    }
+
+    IEnumerator EndJump()
+    {
+        float jumpTimeCounter = 0;
+        while (jumpTimeCounter < maxJumpTime && Input.GetButton("Jump"))
+        {
+            jumpTimeCounter += Time.deltaTime;
+            yield return null;
+        }
+        isJumping = false;
     }
 
     void FixedUpdate() 
@@ -60,19 +97,7 @@ public class PlayerMovement : MonoBehaviour
     void Run()
     {
         float moveInputX = Input.GetAxis("Horizontal");
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            isSprinting = true;
-            currentSpeed = Mathf.MoveTowards(currentSpeed, runSpeed, accelerationSpeed * Time.deltaTime);
-        }
-        else
-        {
-            isSprinting = false;
-            currentSpeed = Mathf.MoveTowards(currentSpeed, walkSpeed, accelerationSpeed * Time.deltaTime);
-        }
-
-        float moveSpeedX = currentSpeed * moveInputX;
+        float moveSpeedX = runSpeed * moveInputX;
 
         myRigidbody.velocity = new Vector2(moveSpeedX, myRigidbody.velocity.y);
 
@@ -110,39 +135,5 @@ public class PlayerMovement : MonoBehaviour
             isFacingRight = !isFacingRight;
         }
 
-    }
-
-    void isSprinting1 ()
-    {
-        if (isSprinting == true)
-        {
-            StartCoroutine(isSprinting2 ());
-        }
-    }
-
-    IEnumerator isSprinting2 ()
-    {
-        yield return new WaitForSeconds(1);
-        stamina -= 1;
-        isSprinting1();
-    }
-
-    void staminaRegen1 ()
-    {
-        if (stamina == 10)
-        {
-            staminaRegen = false;
-        }
-        else if (staminaRegen == true)
-        {
-            StartCoroutine(staminaRegen2 ());
-        }
-    }
-
-    IEnumerator staminaRegen2 ()
-    {
-        yield return new WaitForSeconds(1);
-        stamina += 1;
-        staminaRegen1();
     }
 }
