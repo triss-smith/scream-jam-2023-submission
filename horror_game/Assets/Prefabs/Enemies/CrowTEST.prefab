@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2060123885908140910}
   - component: {fileID: 1661608659299813515}
   - component: {fileID: 93136290853581026}
-  m_Layer: 0
+  - component: {fileID: 3905634188535132610}
+  m_Layer: 7
   m_Name: CrowTEST
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 384032459
-  m_SortingLayer: 3
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ad6a4bc6943f9d142966377ab5d6b051, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -112,7 +113,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &93136290853581026
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -142,7 +143,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -161,3 +162,21 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &3905634188535132610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7518616158943939092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a3ddd4b1952aa47b1a30080459c57a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalPatrolDistance: 5
+  horizontalPatrolSpeed: 2
+  verticalPatrolDistance: 2
+  verticalPatrolSpeed: 1
+  detectionRange: 5
+  followSpeed: 5
