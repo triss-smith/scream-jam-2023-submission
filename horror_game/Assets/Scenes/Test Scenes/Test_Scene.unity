@@ -238,6 +238,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &173393253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3944071221754018391, guid: 3c80b59e080b0554196b518d6fa6cc59, type: 3}
+  m_PrefabInstance: {fileID: 715780288}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &173393259 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3154030896819370878, guid: 3c80b59e080b0554196b518d6fa6cc59, type: 3}
+  m_PrefabInstance: {fileID: 715780288}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &173393261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173393253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f84847b8c21ceae42aac1ad01b3bf951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <playerDetected>k__BackingField: 0
+  detectorOrigin: {fileID: 173393259}
+  detectorSize: {x: 7, y: 2.68}
+  detectorOffset: {x: 0, y: -2.97}
+  detectionDelay: 0.3
+  detectionLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 1}
+  gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
+  showGizmos: 1
+  target: {fileID: 755638191}
 --- !u!1 &617903339
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkullTree
       objectReference: {fileID: 0}
+    - target: {fileID: 4926912572641845642, guid: 3c80b59e080b0554196b518d6fa6cc59, type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 755638191}
     - target: {fileID: 5057408187443731016, guid: 3c80b59e080b0554196b518d6fa6cc59, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
       value: 4294967295
@@ -376,11 +414,20 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64473330664101424, guid: 3c80b59e080b0554196b518d6fa6cc59, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3944071221754018391, guid: 3c80b59e080b0554196b518d6fa6cc59, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 173393261}
   m_SourcePrefab: {fileID: 100100000, guid: 3c80b59e080b0554196b518d6fa6cc59, type: 3}
+--- !u!1 &755638191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3330713563523630136, guid: 665ad05744ba1e8439907138df2f35c0, type: 3}
+  m_PrefabInstance: {fileID: 1725061879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &915110408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5273075388156316969, guid: 665ad05744ba1e8439907138df2f35c0, type: 3}

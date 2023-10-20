@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6705449992023135849}
   - component: {fileID: 4926912572641845642}
   - component: {fileID: 5057408187443731016}
-  - component: {fileID: 64473330664101424}
+  - component: {fileID: 923753607106883379}
   m_Layer: 7
   m_Name: SkullTree
   m_TagString: Enemy
@@ -96,7 +96,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3944071221754018391}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   detectionRange: 5
+  playerObject: {fileID: 0}
 --- !u!68 &5057408187443731016
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -141,7 +142,7 @@ EdgeCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -170,38 +171,27 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!58 &64473330664101424
-CircleCollider2D:
+--- !u!114 &923753607106883379
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3944071221754018391}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f84847b8c21ceae42aac1ad01b3bf951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <playerDetected>k__BackingField: 0
+  detectorOrigin: {fileID: 3154030896819370878}
+  detectorSize: {x: 7, y: 2.68}
+  detectorOffset: {x: 0, y: -2.97}
+  detectionDelay: 0.3
+  detectionLayerMask:
     serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 4.75
+    m_Bits: 256
+  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 1}
+  gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
+  showGizmos: 1
+  target: {fileID: 0}
