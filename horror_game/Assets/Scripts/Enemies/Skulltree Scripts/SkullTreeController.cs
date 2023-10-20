@@ -73,4 +73,11 @@ public class SkullTreeController : MonoBehaviour
         // Move the enemy back to its initial position.
         transform.position += directionToInitialPosition * moveSpeed * Time.deltaTime;
     }
+
+    // Draw the detection range using Gizmos
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
+    }
 }
