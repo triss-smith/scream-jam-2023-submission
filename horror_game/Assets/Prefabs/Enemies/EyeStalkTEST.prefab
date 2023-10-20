@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 4113622156736554463}
   - component: {fileID: 5484686446223739199}
   - component: {fileID: 1055837061608096160}
-  - component: {fileID: 5151632079754200990}
-  m_Layer: 0
+  - component: {fileID: 6091766729844203937}
+  - component: {fileID: 640137085826315368}
+  m_Layer: 7
   m_Name: EyeStalkTEST
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 384032459
-  m_SortingLayer: 3
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d5989ec51f2aba84594637a8e9ceca77, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -143,7 +144,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0112576485, y: 0.08639574}
@@ -159,7 +160,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1257925, y: 1.6566064}
   m_EdgeRadius: 0
---- !u!114 &5151632079754200990
+--- !u!114 &6091766729844203937
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,6 +169,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 8645211287568276958}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4134514c5ef194c4697d1699d4bef061, type: 3}
+  m_Script: {fileID: 11500000, guid: 67298559e135a8448879561bacde219c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectionRadius: 5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!95 &640137085826315368
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8645211287568276958}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3bc7b89dd49e39c4aa14f42f3cb20e76, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
