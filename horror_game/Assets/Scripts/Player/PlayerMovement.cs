@@ -23,11 +23,13 @@ public class PlayerMovement : MonoBehaviour
     
     [Header("Sneaking")]
     public GameObject relic;
-    private bool _isSneaking = false;
-    public float maxSneakDuration = 5.0f;
+    public bool _isSneaking = false;
+    public bool _sneakDepleted = false;
+    public int maxSneakDuration = 5;
     public float sneakSpeed = 2.0f;
     public float sneakRechargeRate = 1.0f;
-    private bool _sneakIsRecharging = false;
+    public bool _sneakIsRecharging = false;
+    public int sneakTimeCounter;
     public GameObject enemyDetectionCollider;
 
 
@@ -44,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         myCapsuleCollider = GetComponent<CapsuleCollider2D>();
         myCircleCollider = GetComponent<CircleCollider2D>();
+        sneakTimeCounter = maxSneakDuration;
     }
 
    
@@ -51,6 +54,17 @@ public class PlayerMovement : MonoBehaviour
     {
         Run();
         relic.SetActive(_isSneaking);
+        enemyDetectionCollider.SetActive(true);
+
+        if (sneakTimeCounter == 0)
+        {
+            _sneakDepleted = true;
+        }
+
+        if (sneakTimeCounter == maxSneakDuration)
+        {
+            _sneakDepleted = false;
+        }
         
         _isGrounded = Physics2D.IsTouchingLayers(myCapsuleCollider, groundLayers);
 
@@ -71,9 +85,17 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
         }
         
-        if (Input.GetButton("Sneak") && !_sneakIsRecharging)
+        if (Input.GetButton("Sneak") && !_sneakDepleted)
         {
-            Sneak();
+            StopCoroutine("RechargeSneak");
+            _isSneaking = true;
+            StartCoroutine(StartSneak());
+        }
+        if (Input.GetButtonUp("Sneak")) {
+            
+            _isSneaking = false;
+            _sneakIsRecharging = true;
+            StartCoroutine(RechargeSneak());
         }
     }
 
@@ -102,37 +124,30 @@ public class PlayerMovement : MonoBehaviour
         }
         isJumping = false;
     }
-
-    void Sneak()
-    {
-        _isSneaking = true;
-        StartCoroutine(StartSneak());
-    }
     
     IEnumerator StartSneak()
     {
-        float sneakTimeCounter = 0;
-        while (sneakTimeCounter < maxSneakDuration && Input.GetButton("Sneak"))
-        {
-            enemyDetectionCollider.SetActive(false);
-            sneakTimeCounter += Time.deltaTime;
-            yield return null;
+        if (_isSneaking) {
+            while (sneakTimeCounter > 0 )
+            {
+                sneakTimeCounter--;
+                yield return new WaitForSeconds(10);
+            }
         }
-        _isSneaking = false;
-        enemyDetectionCollider.SetActive(true);
-        _sneakIsRecharging = true;
-        StartCoroutine(RechargeSneak());
+        
     }
     
     IEnumerator RechargeSneak()
     {
-        float sneakTimeCounter = 0;
-        while (sneakTimeCounter < maxSneakDuration && _sneakIsRecharging)
+        
+        while(sneakTimeCounter < maxSneakDuration && _sneakIsRecharging)
         {
-            sneakTimeCounter += Time.deltaTime;
-            yield return null;
+            sneakTimeCounter++;
+            yield return new WaitForSeconds(sneakRechargeRate);
         }
+
         _sneakIsRecharging = false;
+        
     }
 
     void FixedUpdate() 
@@ -149,7 +164,7 @@ public class PlayerMovement : MonoBehaviour
     void Run()
     {
         float moveInputX = Input.GetAxis("Horizontal");
-        float moveSpeedX = runSpeed * moveInputX;
+        float moveSpeedX = (_isSneaking ? sneakSpeed : runSpeed) * moveInputX;
 
         myRigidbody.velocity = new Vector2(moveSpeedX, myRigidbody.velocity.y);
 

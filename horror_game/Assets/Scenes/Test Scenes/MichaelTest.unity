@@ -799,6 +799,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 933334025}
     m_Modifications:
+    - target: {fileID: 6091766729844203937, guid: f04315b06ad71d042b244dbcc98e371b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361190770661547583, guid: f04315b06ad71d042b244dbcc98e371b, type: 3}
+      propertyPath: detectionDelay
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361190770661547583, guid: f04315b06ad71d042b244dbcc98e371b, type: 3}
+      propertyPath: detectorSize.x
+      value: 3.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361190770661547583, guid: f04315b06ad71d042b244dbcc98e371b, type: 3}
+      propertyPath: detectorSize.y
+      value: 3.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361190770661547583, guid: f04315b06ad71d042b244dbcc98e371b, type: 3}
+      propertyPath: detectorOffset.y
+      value: 0.73
+      objectReference: {fileID: 0}
     - target: {fileID: 8645211287568276958, guid: f04315b06ad71d042b244dbcc98e371b, type: 3}
       propertyPath: m_Name
       value: EyeStalk
@@ -1060,6 +1080,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1721201823}
+    - target: {fileID: 923753607106883379, guid: 3c80b59e080b0554196b518d6fa6cc59, type: 3}
+      propertyPath: detectionLayerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 3154030896819370878, guid: 3c80b59e080b0554196b518d6fa6cc59, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.89
@@ -4414,7 +4438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1650018003111591192, guid: 6ecf04e9c1a260d45a97c835272b78cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.0379996
+      value: -8.145
       objectReference: {fileID: 0}
     - target: {fileID: 1650018003111591192, guid: 6ecf04e9c1a260d45a97c835272b78cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4447,6 +4471,14 @@ PrefabInstance:
     - target: {fileID: 1650018003111591192, guid: 6ecf04e9c1a260d45a97c835272b78cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758932560721810169, guid: 6ecf04e9c1a260d45a97c835272b78cc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810919489187299778, guid: 6ecf04e9c1a260d45a97c835272b78cc, type: 3}
+      propertyPath: m_ScreenY
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 5102539719734972274, guid: 6ecf04e9c1a260d45a97c835272b78cc, type: 3}
       propertyPath: m_Name

@@ -328,10 +328,13 @@ MonoBehaviour:
   isJumping: 0
   maxJumpTime: 0.2
   relic: {fileID: 7863724952180747301}
-  isSneaking: 0
-  maxSneakDuration: 5
+  _isSneaking: 0
+  _sneakDepleted: 0
+  maxSneakDuration: 12
   sneakSpeed: 2
   sneakRechargeRate: 1
+  _sneakIsRecharging: 0
+  sneakTimeCounter: 0
   enemyDetectionCollider: {fileID: 1983138695270708873}
 --- !u!1 &4286991284623803631
 GameObject:
@@ -499,6 +502,6 @@ SpriteRenderer:
   m_Size: {x: 0.79, y: 1.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
