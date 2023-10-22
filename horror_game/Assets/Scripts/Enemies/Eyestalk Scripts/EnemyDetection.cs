@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class EnemyDetection : MonoBehaviour
 {
@@ -9,11 +10,13 @@ public class EnemyDetection : MonoBehaviour
 
     private Transform player; // Reference to the player's transform
     private Animator myAnimator; // Reference to the Animator component
+    private Light2D _enemySpotlight;
 
     private void Start()
     {
         player = GameObject.FindWithTag("Player").transform; // Assuming the player is tagged as "Player"
         myAnimator = GetComponent<Animator>(); // Assign the Animator component of the enemy
+        _enemySpotlight = GetComponentInChildren<Light2D>();
     }
 
     private void Update()
@@ -25,11 +28,13 @@ public class EnemyDetection : MonoBehaviour
         {
             // Handle what happens when the player is detected (e.g., attack, chase, etc.)
             myAnimator.SetBool("isDetected", true);
+            _enemySpotlight.enabled = true;
             Debug.Log("Player detected!");
         }
         else
         {
             myAnimator.SetBool("isDetected", false);
+            _enemySpotlight.enabled = false;
         }
     }
 

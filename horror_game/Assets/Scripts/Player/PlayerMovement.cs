@@ -6,48 +6,58 @@ using Debug = UnityEngine.Debug;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] float runSpeed = 7.97f;
-    [SerializeField] float jumpForce = 20f;
-    public float maxJumpTime = 0.2f;
+    private bool _isFacingRight = true;
+    private float _currentSpeed;
 
-
-    public float accelerationSpeed = 3f;
-    public float decelerationSpeed = 3f;
-    private bool isFacingRight = true;
+    
+    [Header("Jumping")]
     public LayerMask groundLayers;
-    private bool isSprinting = false;
-    private bool isGrounded = true;
-    private float jumpTimeCounter;
+    public float jumpForce = 20f;
+    public float decelerationSpeed = 3f;
+    private bool _isGrounded = true;
+    private float _jumpTimeCounter;
     public bool isJumping;
-    public float maxSneakDuration = 5.0f; // Maximum duration for sneaking in seconds
-    public GameObject sneakObject; //
-   
-    private float currentSpeed;
+    public float maxJumpTime = 0.2f;
+    
+    [Header("Sneaking")]
+    public GameObject relic;
+    public bool isSneaking = false;
+    public float maxSneakDuration = 5.0f;
+    public float sneakSpeed = 2.0f;
+    public float sneakRechargeRate = 1.0f;
+    private bool _sneakIsRecharging = false;
 
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
     Animator myAnimator;
     CapsuleCollider2D myCapsuleCollider;
+    CircleCollider2D myCircleCollider;
   
     void Start()
     {
+        // relic = transform.GetChild(0).gameObject;
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myCapsuleCollider = GetComponent<CapsuleCollider2D>();
+        myCircleCollider = GetComponent<CircleCollider2D>();
     }
 
    
     void Update()
     {
         Run();
-        isGrounded = Physics2D.IsTouchingLayers(myCapsuleCollider, groundLayers);
+        relic.SetActive(isSneaking);
+        
+        _isGrounded = Physics2D.IsTouchingLayers(myCapsuleCollider, groundLayers);
 
-        if (isGrounded) {
-            jumpTimeCounter = maxJumpTime;  // Reset jump time counter when grounded.
+        if (_isGrounded) {
+            _jumpTimeCounter = maxJumpTime;  // Reset jump time counter when grounded.
             isJumping = false;
         }
 
-        if (Input.GetButtonDown("Jump") && isGrounded) {
+        if (Input.GetButtonDown("Jump") && _isGrounded) {
             Jump();
         }
 
@@ -57,6 +67,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonUp("Jump")) {
             isJumping = false;
+        }
+        
+        if (Input.GetButton("Sneak"))
+        {
+            Sneak();
         }
     }
 
@@ -86,6 +101,38 @@ public class PlayerMovement : MonoBehaviour
         isJumping = false;
     }
 
+    void Sneak()
+    {
+        isSneaking = true;
+        myCircleCollider.enabled = false;
+        StartCoroutine(StartSneak());
+    }
+    
+    IEnumerator StartSneak()
+    {
+        float sneakTimeCounter = 0;
+        while (sneakTimeCounter < maxSneakDuration && Input.GetButton("Sneak"))
+        {
+            sneakTimeCounter += Time.deltaTime;
+            yield return null;
+        }
+        isSneaking = false;
+        myCircleCollider.enabled = true;
+        _sneakIsRecharging = true;
+        StartCoroutine(RechargeSneak());
+    }
+    
+    IEnumerator RechargeSneak()
+    {
+        float sneakTimeCounter = 0;
+        while (sneakTimeCounter < maxSneakDuration && _sneakIsRecharging)
+        {
+            sneakTimeCounter += Time.deltaTime;
+            yield return null;
+        }
+        _sneakIsRecharging = false;
+    }
+
     void FixedUpdate() 
     {
         myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, Mathf.Clamp(myRigidbody.velocity.y, -decelerationSpeed, decelerationSpeed * 5));
@@ -110,11 +157,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void TurnCheck()
     {
-        if (moveInput.x > 0 && !isFacingRight)
+        if (moveInput.x > 0 && !_isFacingRight)
         {
             Flip();
         }
-        else if (moveInput.x < 0 && isFacingRight)
+        else if (moveInput.x < 0 && _isFacingRight)
         {
             Flip();
         }
@@ -128,14 +175,14 @@ public class PlayerMovement : MonoBehaviour
         // {
         //     transform.localRotation = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
         // }
-        if (isFacingRight) {             
+        if (_isFacingRight) {             
             Vector3 rotator = new Vector3(transform.rotation.x, 180f, transform.rotation.z);
             transform.rotation = Quaternion.Euler(rotator);
-            isFacingRight = !isFacingRight;
+            _isFacingRight = !_isFacingRight;
         } else {
             Vector3 rotator = new Vector3(transform.rotation.x, 0f, transform.rotation.z);
             transform.rotation = Quaternion.Euler(rotator);
-            isFacingRight = !isFacingRight;
+            _isFacingRight = !_isFacingRight;
         }
 
     }

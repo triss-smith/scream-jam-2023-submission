@@ -145,7 +145,7 @@ EdgeCollider2D:
     m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -191,7 +191,7 @@ MonoBehaviour:
   detectionLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 0}
-  gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 0.21176471}
+  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 0.08627451}
+  gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
   showGizmos: 1
   target: {fileID: 0}
