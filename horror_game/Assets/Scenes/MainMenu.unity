@@ -379,8 +379,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 531897535}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &480866702
@@ -554,7 +553,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 83.15, y: -95.450005}
-  m_SizeDelta: {x: 166.3, y: 50.3}
+  m_SizeDelta: {x: 160, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &503555609
 MonoBehaviour:
@@ -880,7 +879,7 @@ RectTransform:
   m_Children:
   - {fileID: 1586116415}
   - {fileID: 2137462276}
-  m_Father: {fileID: 458209408}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -924,7 +923,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 83.15, y: -25.15}
-  m_SizeDelta: {x: 166.3, y: 50.3}
+  m_SizeDelta: {x: 160, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &680867744
 MonoBehaviour:
@@ -1100,7 +1099,7 @@ GameObject:
   - component: {fileID: 1586116417}
   - component: {fileID: 1586116416}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Title Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1259,7 +1258,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 83.15, y: -165.75}
-  m_SizeDelta: {x: 166.3, y: 50.3}
+  m_SizeDelta: {x: 160, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1777072126
 MonoBehaviour:
@@ -1485,4 +1484,5 @@ SceneRoots:
   - {fileID: 2050470080}
   - {fileID: 223829957}
   - {fileID: 939149879}
+  - {fileID: 531897535}
   - {fileID: 458209408}
