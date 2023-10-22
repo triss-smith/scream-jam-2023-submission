@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 8233385415756928568}
   - component: {fileID: 194982867559600495}
   - component: {fileID: 340698258351594016}
-  - component: {fileID: 7590430999461421451}
   - component: {fileID: -3939298551940951449}
+  - component: {fileID: 7590430999461421451}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -192,7 +192,7 @@ Rigidbody2D:
   m_LinearDrag: 1.71
   m_AngularDrag: 1.2
   m_GravityScale: 6
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3983dbb6baf5a3f46909e7695cdfdadd, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -203,26 +203,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7590430999461421451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3330713563523630136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc4e3de1a90e6df42a93f0cb499e16fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runSpeed: 9.9
-  jumpForce: 22.1
-  maxJumpTime: 0.2
-  accelerationSpeed: 3.86
-  decelerationSpeed: 12.48
-  isJumping: 0
-  maxSneakDuration: 5
-  sneakObject: {fileID: 0}
 --- !u!58 &-3939298551940951449
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -258,3 +238,26 @@ CircleCollider2D:
   m_Offset: {x: -1, y: 0}
   serializedVersion: 2
   m_Radius: 2.71
+--- !u!114 &7590430999461421451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3330713563523630136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc4e3de1a90e6df42a93f0cb499e16fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runSpeed: 9.9
+  jumpForce: 22.1
+  maxJumpTime: 0.2
+  accelerationSpeed: 3.86
+  decelerationSpeed: 12.48
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  isJumping: 0
+  maxSneakDuration: 5
+  sneakObject: {fileID: 0}

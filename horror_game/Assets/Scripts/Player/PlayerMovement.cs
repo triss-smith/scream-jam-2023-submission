@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float accelerationSpeed = 3f;
     public float decelerationSpeed = 3f;
     private bool isFacingRight = true;
-    // public LayerMask groundLayers;
+    public LayerMask groundLayers;
     private bool isSprinting = false;
     private bool isGrounded = true;
     private float jumpTimeCounter;
@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Run();
+        isGrounded = Physics2D.IsTouchingLayers(myCapsuleCollider, groundLayers);
 
         if (isGrounded) {
             jumpTimeCounter = maxJumpTime;  // Reset jump time counter when grounded.
