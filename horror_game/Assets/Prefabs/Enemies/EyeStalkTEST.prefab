@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 5484686446223739199}
   - component: {fileID: 1055837061608096160}
   - component: {fileID: 6091766729844203937}
+  - component: {fileID: 7361190770661547583}
   - component: {fileID: 640137085826315368}
   m_Layer: 7
   m_Name: EyeStalkTEST
@@ -259,6 +260,30 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &7361190770661547583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8645211287568276958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f84847b8c21ceae42aac1ad01b3bf951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <playerDetected>k__BackingField: 0
+  detectorOrigin: {fileID: 8865023907996489576}
+  detectorSize: {x: 2.25, y: 2.2}
+  detectorOffset: {x: 0, y: 0}
+  detectionDelay: 0.3
+  detectionLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 1}
+  gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
+  showGizmos: 1
+  target: {fileID: 3330713563523630136, guid: 665ad05744ba1e8439907138df2f35c0, type: 3}
 --- !u!95 &640137085826315368
 Animator:
   serializedVersion: 5

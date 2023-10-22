@@ -23,11 +23,13 @@ public class PlayerMovement : MonoBehaviour
     
     [Header("Sneaking")]
     public GameObject relic;
-    public bool isSneaking = false;
+    private bool _isSneaking = false;
     public float maxSneakDuration = 5.0f;
     public float sneakSpeed = 2.0f;
     public float sneakRechargeRate = 1.0f;
     private bool _sneakIsRecharging = false;
+    public GameObject enemyDetectionCollider;
+
 
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
@@ -48,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Run();
-        relic.SetActive(isSneaking);
+        relic.SetActive(_isSneaking);
         
         _isGrounded = Physics2D.IsTouchingLayers(myCapsuleCollider, groundLayers);
 
@@ -69,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
         }
         
-        if (Input.GetButton("Sneak"))
+        if (Input.GetButton("Sneak") && !_sneakIsRecharging)
         {
             Sneak();
         }
@@ -103,8 +105,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Sneak()
     {
-        isSneaking = true;
-        myCircleCollider.enabled = false;
+        _isSneaking = true;
         StartCoroutine(StartSneak());
     }
     
@@ -113,11 +114,12 @@ public class PlayerMovement : MonoBehaviour
         float sneakTimeCounter = 0;
         while (sneakTimeCounter < maxSneakDuration && Input.GetButton("Sneak"))
         {
+            enemyDetectionCollider.SetActive(false);
             sneakTimeCounter += Time.deltaTime;
             yield return null;
         }
-        isSneaking = false;
-        myCircleCollider.enabled = true;
+        _isSneaking = false;
+        enemyDetectionCollider.SetActive(true);
         _sneakIsRecharging = true;
         StartCoroutine(RechargeSneak());
     }

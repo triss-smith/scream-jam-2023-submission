@@ -20,9 +20,12 @@ public class SquiddyAI : MonoBehaviour
     private float verticalPatrolDuration; // Random duration for vertical movement
     private Transform player;
     private bool isFollowingPlayer = false;
+    
+    AIPlayerDetector _aiPlayerDetector;
 
     private void Start()
     {
+        _aiPlayerDetector = GetComponent<AIPlayerDetector>();
         initialPosition = transform.position;
         horizontalTargetPosition = initialPosition + Vector2.right * horizontalPatrolDistance;
         RandomizeVerticalPatrol();
@@ -33,7 +36,7 @@ public class SquiddyAI : MonoBehaviour
 
     private void Update()
     {
-        if (isFollowingPlayer)
+        if (isFollowingPlayer && _aiPlayerDetector.playerDetected)
         {
             FollowPlayer();
         }
