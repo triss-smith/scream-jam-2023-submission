@@ -6,12 +6,14 @@ public class DetectedEyeUp : MonoBehaviour
 {
     public float detectionRadius = 5f; // Detection radius to be set in the Inspector
     public LayerMask playerLayer; // The layer that the player is on
+    private AIPlayerDetector _aiPlayerDetector;
 
     private Transform player; // Reference to the player's transform
     private Animator myAnimator; // Reference to the Animator component
 
     private void Start()
     {
+        _aiPlayerDetector = GetComponent<AIPlayerDetector>();
         player = GameObject.FindWithTag("Player").transform; // Assuming the player is tagged as "Player"
         myAnimator = GetComponent<Animator>(); // Assign the Animator component of the enemy
     }
