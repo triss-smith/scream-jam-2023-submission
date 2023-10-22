@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2537181760306281571}
   - component: {fileID: 8065670469160345748}
   - component: {fileID: 6420466682374963146}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Movement Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2095418873604293938}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.54, y: -1.01, z: 0}
+  m_LocalPosition: {x: -21.82, y: -1.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4843,7 +4843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7546745460739664290
 Transform:
   m_ObjectHideFlags: 0

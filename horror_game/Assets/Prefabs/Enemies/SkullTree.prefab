@@ -191,7 +191,7 @@ MonoBehaviour:
   detectionLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 0.08627451}
-  gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
+  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 0}
+  gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 0.21176471}
   showGizmos: 1
   target: {fileID: 0}
