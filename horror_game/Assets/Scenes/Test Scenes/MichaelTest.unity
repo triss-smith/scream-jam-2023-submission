@@ -4520,7 +4520,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1183108115}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlatformColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
