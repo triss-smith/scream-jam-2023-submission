@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,9 @@ public class SkullTreeController : MonoBehaviour
     private Collider2D playerCollider;
 
     private AIPlayerDetector playerDetector;
+    private AIPlayerGameOver playerGameOver;
+    private PlayerMovement _playerMovement;
+    
 
     private Collider2D enemyCollider;
 
@@ -31,13 +35,14 @@ public class SkullTreeController : MonoBehaviour
         animator = GetComponent<Animator>();
         enemyCollider = GetComponent<Collider2D>();
         playerDetector = GetComponent<AIPlayerDetector>();
+        _playerMovement = playerObject.GetComponent<PlayerMovement>();
+        playerGameOver = GetComponent<AIPlayerGameOver>();
     }
 
     void Update()
     {
-
         // Check if the player is within the detection range.
-        if (playerDetector.playerDetected )
+        if (playerDetector.playerDetected && !_playerMovement._isSneaking)
         {
             isChasing = true;
 
@@ -76,9 +81,28 @@ public class SkullTreeController : MonoBehaviour
             // Optional: Update the animator parameters to control animations (if using an animator).
             // animator.SetFloat("Speed", 0);
         }
+
+        if (playerGameOver.playerHit && !_playerMovement._isSneaking)
+        {
+            GameOver();
+        }
     }
 
-    
+    void GameOver()
+    {
+        Debug.Log("Game Over");
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        CapsuleCollider2D playerCollider = _playerMovement.playerCollider;
+        if (collision.gameObject == _playerMovement.GameOverObject)
+        {
+            Debug.Log("Game Over");
+            // If the enemy collides with the player, the player takes damage.
+            // collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
+        }
+    }
 
     void ReturnToInitialPosition()
     {

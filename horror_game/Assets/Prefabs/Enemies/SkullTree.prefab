@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4926912572641845642}
   - component: {fileID: 5057408187443731016}
   - component: {fileID: 923753607106883379}
+  - component: {fileID: 6591078263557077413}
   m_Layer: 7
   m_Name: SkullTree
   m_TagString: Enemy
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3944071221754018391}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.45, y: -2.37, z: 9.857698}
+  m_LocalPosition: {x: -5.74, y: -2.27, z: 9.857698}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -184,7 +185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <playerDetected>k__BackingField: 0
-  detectorOrigin: {fileID: 3154030896819370878}
   detectorSize: {x: 17, y: 9.27}
   detectorOffset: {x: 0, y: 0.02}
   detectionDelay: 0.3
@@ -194,4 +194,29 @@ MonoBehaviour:
   gizmoIdleColor: {r: 0, g: 1, b: 0, a: 0.08627451}
   gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
   showGizmos: 1
+  isCube: 1
   target: {fileID: 0}
+--- !u!114 &6591078263557077413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3944071221754018391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95a7201ef6c49ccba2e654c9ff6455f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <playerHit>k__BackingField: 0
+  detectorSize: {x: 3.23, y: 1.33}
+  detectorOffset: {x: 0, y: 0}
+  detectionDelay: 0.3
+  detectionLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 1}
+  gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
+  showGizmos: 1
+  isCube: 1
+  target: {fileID: 3330713563523630136, guid: 665ad05744ba1e8439907138df2f35c0, type: 3}

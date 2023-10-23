@@ -32,12 +32,15 @@ public class PlayerMovement : MonoBehaviour
     public int sneakTimeCounter;
     public GameObject enemyDetectionCollider;
 
-
+    public GameObject GameOverObject;
+    public CapsuleCollider2D playerCollider;
+    
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
     Animator myAnimator;
     CapsuleCollider2D myCapsuleCollider;
     CircleCollider2D myCircleCollider;
+    
   
     void Start()
     {
@@ -46,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         myCapsuleCollider = GetComponent<CapsuleCollider2D>();
         myCircleCollider = GetComponent<CircleCollider2D>();
         sneakTimeCounter = maxSneakDuration;
+        playerCollider = GameOverObject.GetComponent<CapsuleCollider2D>();
     }
 
    
