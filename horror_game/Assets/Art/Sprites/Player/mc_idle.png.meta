@@ -139,10 +139,10 @@ TextureImporter:
       name: mc_idle_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 28
         y: 0
-        width: 165
-        height: 320
+        width: 124
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: mc_idle_1
       rect:
         serializedVersion: 2
-        x: 165
+        x: 182
         y: 0
-        width: 165
-        height: 320
+        width: 124
+        height: 313
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

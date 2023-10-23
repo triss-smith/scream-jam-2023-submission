@@ -22,7 +22,7 @@ public class SkullTreeController : MonoBehaviour
 
     private Vector3 initialPosition;    // Initial position of the enemy.
     private bool isChasing = false;     // Flag to check if the enemy is chasing.
-    private Animator animator;          // Reference to the enemy's animator (if you're using one).
+    private Animator myAnimator;          // Reference to the enemy's animator (if you're using one).
      
     
     // Add any other variables or references as needed.
@@ -33,7 +33,7 @@ public class SkullTreeController : MonoBehaviour
         playerTransform = playerObject.transform; 
         initialPosition = transform.position;
         // Initialize the animator if you're using one.
-        animator = GetComponent<Animator>();
+        myAnimator = GetComponent<Animator>();
         enemyCollider = GetComponent<Collider2D>();
         playerDetector = GetComponent<AIPlayerDetector>();
         _playerMovement = playerObject.GetComponent<PlayerMovement>();
@@ -46,6 +46,7 @@ public class SkullTreeController : MonoBehaviour
         if (playerDetector.playerDetected && !_playerMovement._isSneaking)
         {
             isChasing = true;
+            myAnimator.SetBool("isRunning", true);
 
             // Calculate the direction to the player.
             Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
@@ -75,7 +76,7 @@ public class SkullTreeController : MonoBehaviour
         else
         {
             isChasing = false;
-
+            myAnimator.SetBool("isRunning", false);
             // If the enemy is not chasing, it can return to its initial position.
             ReturnToInitialPosition();
             
