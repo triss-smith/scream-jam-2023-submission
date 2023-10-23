@@ -209,14 +209,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <playerHit>k__BackingField: 0
-  detectorSize: {x: 3.23, y: 1.33}
-  detectorOffset: {x: 0, y: 0}
+  detectorSize: {x: 1, y: 8}
+  detectorOffset: {x: 0.27, y: 0}
   detectionDelay: 0.3
   detectionLayerMask:
     serializedVersion: 2
     m_Bits: 1024
   gizmoIdleColor: {r: 0, g: 1, b: 0, a: 1}
   gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
-  showGizmos: 1
+  showGizmos: 0
   isCube: 1
   target: {fileID: 3330713563523630136, guid: 665ad05744ba1e8439907138df2f35c0, type: 3}

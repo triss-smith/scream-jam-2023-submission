@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SkullTreeController : MonoBehaviour
 {
@@ -86,22 +87,14 @@ public class SkullTreeController : MonoBehaviour
         {
             GameOver();
         }
+        
     }
 
     void GameOver()
     {
-        Debug.Log("Game Over");
-    }
+        Debug.Log("Load Game over scene");
+        SceneManager.LoadScene("GameOver");
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        CapsuleCollider2D playerCollider = _playerMovement.playerCollider;
-        if (collision.gameObject == _playerMovement.GameOverObject)
-        {
-            Debug.Log("Game Over");
-            // If the enemy collides with the player, the player takes damage.
-            // collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
-        }
     }
 
     void ReturnToInitialPosition()

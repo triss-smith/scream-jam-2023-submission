@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 93136290853581026}
   - component: {fileID: 55163162921726465}
   - component: {fileID: 3905634188535132610}
+  - component: {fileID: 8378158192340416457}
   m_Layer: 7
   m_Name: CrowTEST
   m_TagString: Enemy
@@ -303,3 +304,27 @@ MonoBehaviour:
   verticalPatrolSpeed: 0.8
   detectionRange: 3.64
   followSpeed: 5
+--- !u!114 &8378158192340416457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7518616158943939092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95a7201ef6c49ccba2e654c9ff6455f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <playerHit>k__BackingField: 0
+  detectorSize: {x: 1, y: 1}
+  detectorOffset: {x: 0, y: 0}
+  detectionDelay: 0.3
+  detectionLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 1}
+  gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
+  showGizmos: 1
+  isCube: 1
+  target: {fileID: 3330713563523630136, guid: 665ad05744ba1e8439907138df2f35c0, type: 3}

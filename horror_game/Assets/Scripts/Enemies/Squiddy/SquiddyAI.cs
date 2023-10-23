@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SquiddyAI : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class SquiddyAI : MonoBehaviour
     private PlayerMovement _playerMovement;
     
     AIPlayerDetector _aiPlayerDetector;
+    AIPlayerGameOver _aiPlayerGameOver;
 
     private void Start()
     {
@@ -34,6 +36,7 @@ public class SquiddyAI : MonoBehaviour
         // Find the player GameObject or tag and assume it's named "Player"
         player = GameObject.FindWithTag("Player").transform;
         _playerMovement = player.GetComponent<PlayerMovement>();
+        _aiPlayerGameOver = GetComponent<AIPlayerGameOver>();
     }
 
     private void Update()
@@ -48,6 +51,16 @@ public class SquiddyAI : MonoBehaviour
             DetectPlayer();
             MoveVertically();
         }
+        
+        if (_aiPlayerGameOver.playerHit && !_playerMovement._isSneaking)
+        {
+            GameOver();
+        }
+    }
+
+    void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 
     private void Patrol()
