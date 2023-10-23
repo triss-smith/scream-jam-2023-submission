@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f39fea79746438d4599d85911c4f6698
+guid: e17696fb1b3145342af947f46d365042
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,55 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crowskull attack and fly animations_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 250
-        width: 285
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7885912594e501e4f9c4b999c7aecc8f
-      internalID: -1301521139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crowskull attack and fly animations_1
-      rect:
-        serializedVersion: 2
-        x: 285
-        y: 250
-        width: 285
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24cfe4940f9093f4a87e7a1bf56d0dde
-      internalID: 1022459223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crowskull attack and fly animations_2
+      name: woman npc walk_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 285
-        height: 250
+        width: 205.75
+        height: 395
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3f95072a8fd8364fa28dff23fce0678
-      internalID: -1586959714
+      spriteID: f204283a64b092a4d92acc0cfcb30873
+      internalID: -637972605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crowskull attack and fly animations_3
+      name: woman npc walk_1
       rect:
         serializedVersion: 2
-        x: 285
+        x: 205
         y: 0
-        width: 285
-        height: 250
+        width: 205.75
+        height: 395
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e89356b3465cfd45b8ff7bbd26530fa
-      internalID: 22558315
+      spriteID: a52daaeccfa2fb943aa7af15bc7beba9
+      internalID: 530537210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crowskull attack and fly animations_4
+      name: woman npc walk_2
       rect:
         serializedVersion: 2
-        x: 570
+        x: 410
         y: 0
-        width: 285
-        height: 250
+        width: 205.75
+        height: 395
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,8 +192,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b47c4df4822196438b612b8a86200b1
-      internalID: 312360169
+      spriteID: c72f66e5b47cb4c489ad1429f2f23fc0
+      internalID: -261499960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman npc walk_3
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 0
+        width: 205.75
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da22934f20722c48800669fcc5bf930
+      internalID: -1755420928
       vertices: []
       indices: 
       edges: []
@@ -251,11 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      crowskull attack and fly animations_0: -1301521139
-      crowskull attack and fly animations_1: 1022459223
-      crowskull attack and fly animations_2: -1586959714
-      crowskull attack and fly animations_3: 22558315
-      crowskull attack and fly animations_4: 312360169
+      woman npc walk_0: -637972605
+      woman npc walk_1: 530537210
+      woman npc walk_2: -261499960
+      woman npc walk_3: -1755420928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

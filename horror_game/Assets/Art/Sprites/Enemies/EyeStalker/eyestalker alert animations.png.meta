@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f39fea79746438d4599d85911c4f6698
+guid: cce1ce76e3a656d498c7220a90d3b7ae
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crowskull attack and fly animations_0
+      name: eyestalker alert animations_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 250
-        width: 285
-        height: 250
+        y: 500
+        width: 260
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7885912594e501e4f9c4b999c7aecc8f
-      internalID: -1301521139
+      spriteID: d11966f806c4be840856ceeb4534f719
+      internalID: 640713685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crowskull attack and fly animations_1
+      name: eyestalker alert animations_1
       rect:
         serializedVersion: 2
-        x: 285
-        y: 250
-        width: 285
-        height: 250
+        x: 260
+        y: 500
+        width: 260
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24cfe4940f9093f4a87e7a1bf56d0dde
-      internalID: 1022459223
+      spriteID: 1f8b260e34077dd4ba628c00f73a5694
+      internalID: -1025538026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crowskull attack and fly animations_2
+      name: eyestalker alert animations_2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 500
+        width: 260
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b150ae45a2f624ea1ef011a9428206
+      internalID: 820942773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eyestalker alert animations_3
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 500
+        width: 260
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0ae226c0ab99d4bb3f5277cc491c9e
+      internalID: 353476744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eyestalker alert animations_4
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 500
+        width: 260
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85116a161cd52b4698ac22435e25fb6
+      internalID: -874016787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eyestalker alert animations_5
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 285
-        height: 250
+        width: 260
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3f95072a8fd8364fa28dff23fce0678
-      internalID: -1586959714
+      spriteID: 0adbc80d25f633a4da9cd47fcf26bbfb
+      internalID: -846393273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crowskull attack and fly animations_3
+      name: eyestalker alert animations_6
       rect:
         serializedVersion: 2
-        x: 285
+        x: 260
         y: 0
-        width: 285
-        height: 250
+        width: 260
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e89356b3465cfd45b8ff7bbd26530fa
-      internalID: 22558315
+      spriteID: 6d74fd4751c47d84bb89016761fb449d
+      internalID: -1185736462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crowskull attack and fly animations_4
+      name: eyestalker alert animations_7
       rect:
         serializedVersion: 2
-        x: 570
+        x: 520
         y: 0
-        width: 285
-        height: 250
+        width: 260
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,8 +297,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b47c4df4822196438b612b8a86200b1
-      internalID: 312360169
+      spriteID: 5b8639af36dd1e44e8d291075824f26f
+      internalID: 939707473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eyestalker alert animations_8
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 260
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e120c5f8ffeb4ae4dbdff555989cf877
+      internalID: -2125082447
       vertices: []
       indices: 
       edges: []
@@ -251,11 +335,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      crowskull attack and fly animations_0: -1301521139
-      crowskull attack and fly animations_1: 1022459223
-      crowskull attack and fly animations_2: -1586959714
-      crowskull attack and fly animations_3: 22558315
-      crowskull attack and fly animations_4: 312360169
+      eyestalker alert animations_0: 640713685
+      eyestalker alert animations_1: -1025538026
+      eyestalker alert animations_2: 820942773
+      eyestalker alert animations_3: 353476744
+      eyestalker alert animations_4: -874016787
+      eyestalker alert animations_5: -846393273
+      eyestalker alert animations_6: -1185736462
+      eyestalker alert animations_7: 939707473
+      eyestalker alert animations_8: -2125082447
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

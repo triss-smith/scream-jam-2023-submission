@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f39fea79746438d4599d85911c4f6698
+guid: 0fb7f73cf533a1947b4d9448a6b47aef
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,55 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crowskull attack and fly animations_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 250
-        width: 285
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7885912594e501e4f9c4b999c7aecc8f
-      internalID: -1301521139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crowskull attack and fly animations_1
-      rect:
-        serializedVersion: 2
-        x: 285
-        y: 250
-        width: 285
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24cfe4940f9093f4a87e7a1bf56d0dde
-      internalID: 1022459223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crowskull attack and fly animations_2
+      name: man npc walk_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 285
-        height: 250
+        width: 203.75
+        height: 368
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3f95072a8fd8364fa28dff23fce0678
-      internalID: -1586959714
+      spriteID: 2fd5ba51cb17b42498f7d55b620e761b
+      internalID: -1213214675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crowskull attack and fly animations_3
+      name: man npc walk_1
       rect:
         serializedVersion: 2
-        x: 285
+        x: 203
         y: 0
-        width: 285
-        height: 250
+        width: 203.75
+        height: 368
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e89356b3465cfd45b8ff7bbd26530fa
-      internalID: 22558315
+      spriteID: 06e5290eb27827444b06ffc698105404
+      internalID: -1930709962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crowskull attack and fly animations_4
+      name: man npc walk_2
       rect:
         serializedVersion: 2
-        x: 570
+        x: 406
         y: 0
-        width: 285
-        height: 250
+        width: 203.75
+        height: 368
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,8 +192,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b47c4df4822196438b612b8a86200b1
-      internalID: 312360169
+      spriteID: 11f5e81b1ca6ece43b7372dfccfe6ff7
+      internalID: -1423688289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: man npc walk_3
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 0
+        width: 203.75
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346edb529c3eca9489127ebe3037d074
+      internalID: -835739531
       vertices: []
       indices: 
       edges: []
@@ -251,11 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      crowskull attack and fly animations_0: -1301521139
-      crowskull attack and fly animations_1: 1022459223
-      crowskull attack and fly animations_2: -1586959714
-      crowskull attack and fly animations_3: 22558315
-      crowskull attack and fly animations_4: 312360169
+      man npc walk_0: -1213214675
+      man npc walk_1: -1930709962
+      man npc walk_2: -1423688289
+      man npc walk_3: -835739531
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

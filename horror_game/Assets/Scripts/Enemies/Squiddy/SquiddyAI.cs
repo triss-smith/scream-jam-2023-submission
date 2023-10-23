@@ -22,6 +22,8 @@ public class SquiddyAI : MonoBehaviour
     private Transform player;
     private bool isFollowingPlayer = false;
     private PlayerMovement _playerMovement;
+
+    private Animator myAnimator; 
     
     AIPlayerDetector _aiPlayerDetector;
     AIPlayerGameOver _aiPlayerGameOver;
@@ -32,6 +34,8 @@ public class SquiddyAI : MonoBehaviour
         initialPosition = transform.position;
         horizontalTargetPosition = initialPosition + Vector2.right * horizontalPatrolDistance;
         RandomizeVerticalPatrol();
+
+        myAnimator = GetComponent<Animator>();
 
         // Find the player GameObject or tag and assume it's named "Player"
         player = GameObject.FindWithTag("Player").transform;
@@ -54,6 +58,7 @@ public class SquiddyAI : MonoBehaviour
         
         if (_aiPlayerGameOver.playerHit && !_playerMovement._isSneaking)
         {
+            myAnimator.SetBool("isAttacking", true);
             GameOver();
         }
     }

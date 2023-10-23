@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f39fea79746438d4599d85911c4f6698
+guid: b6365fc2d81ec6a4dbe68e27d62243e0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,55 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crowskull attack and fly animations_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 250
-        width: 285
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7885912594e501e4f9c4b999c7aecc8f
-      internalID: -1301521139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crowskull attack and fly animations_1
-      rect:
-        serializedVersion: 2
-        x: 285
-        y: 250
-        width: 285
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24cfe4940f9093f4a87e7a1bf56d0dde
-      internalID: 1022459223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: crowskull attack and fly animations_2
+      name: cultist walk cycle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 285
-        height: 250
+        width: 200
+        height: 550
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3f95072a8fd8364fa28dff23fce0678
-      internalID: -1586959714
+      spriteID: a3c7557a4f1463746862616010e7fcd9
+      internalID: 405424937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crowskull attack and fly animations_3
+      name: cultist walk cycle_1
       rect:
         serializedVersion: 2
-        x: 285
+        x: 200
         y: 0
-        width: 285
-        height: 250
+        width: 200
+        height: 550
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e89356b3465cfd45b8ff7bbd26530fa
-      internalID: 22558315
+      spriteID: 927a1e95d4236e1439de2d8fa35acf3e
+      internalID: -1135713835
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crowskull attack and fly animations_4
+      name: cultist walk cycle_2
       rect:
         serializedVersion: 2
-        x: 570
+        x: 400
         y: 0
-        width: 285
-        height: 250
+        width: 200
+        height: 550
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,8 +192,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b47c4df4822196438b612b8a86200b1
-      internalID: 312360169
+      spriteID: cce71ac6c914bab48b984391676237d4
+      internalID: 759806318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cultist walk cycle_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 200
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89498551b776e04f8c61a3b1434d4b5
+      internalID: 2091075392
       vertices: []
       indices: 
       edges: []
@@ -251,11 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      crowskull attack and fly animations_0: -1301521139
-      crowskull attack and fly animations_1: 1022459223
-      crowskull attack and fly animations_2: -1586959714
-      crowskull attack and fly animations_3: 22558315
-      crowskull attack and fly animations_4: 312360169
+      cultist walk cycle_0: 405424937
+      cultist walk cycle_1: -1135713835
+      cultist walk cycle_2: 759806318
+      cultist walk cycle_3: 2091075392
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

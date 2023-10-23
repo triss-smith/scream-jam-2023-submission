@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Player
   - Player Detection Layer
   - Game Over
-  - 
+  - NPC
   - 
   - 
   - 
@@ -60,6 +61,9 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 778400581
+    locked: 0
+  - name: NPC
+    uniqueID: 3728906631
     locked: 0
   - name: Player
     uniqueID: 1374275969
