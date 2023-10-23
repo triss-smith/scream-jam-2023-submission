@@ -20,6 +20,7 @@ public class SquiddyAI : MonoBehaviour
     private float verticalPatrolDuration; // Random duration for vertical movement
     private Transform player;
     private bool isFollowingPlayer = false;
+    private PlayerMovement _playerMovement;
     
     AIPlayerDetector _aiPlayerDetector;
 
@@ -32,11 +33,12 @@ public class SquiddyAI : MonoBehaviour
 
         // Find the player GameObject or tag and assume it's named "Player"
         player = GameObject.FindWithTag("Player").transform;
+        _playerMovement = player.GetComponent<PlayerMovement>();
     }
 
     private void Update()
     {
-        if (isFollowingPlayer && _aiPlayerDetector.playerDetected)
+        if (isFollowingPlayer && _aiPlayerDetector.playerDetected && !_playerMovement._isSneaking)
         {
             FollowPlayer();
         }
