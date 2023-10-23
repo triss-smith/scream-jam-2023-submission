@@ -30,7 +30,11 @@ public class AreaTriggeredText : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        UIObject.SetActive(false);
-        Destroy(trigger);
+        if (other.tag == "Player")
+        {
+            UIObject.SetActive(false);
+            Destroy(trigger);
+        }
+        
     }
 }
