@@ -41,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
   
     void Start()
     {
-        // relic = transform.GetChild(0).gameObject;
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myCapsuleCollider = GetComponent<CapsuleCollider2D>();
@@ -56,8 +55,9 @@ public class PlayerMovement : MonoBehaviour
         relic.SetActive(_isSneaking);
         enemyDetectionCollider.SetActive(true);
 
-        if (sneakTimeCounter == 0)
+        if (sneakTimeCounter <= 0)
         {
+            sneakTimeCounter = 0;
             _sneakDepleted = true;
         }
 
@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(StartSneak());
         }
         if (Input.GetButtonUp("Sneak")) {
-            
+            StopCoroutine("StartSneak");
             _isSneaking = false;
             _sneakIsRecharging = true;
             StartCoroutine(RechargeSneak());
@@ -127,14 +127,14 @@ public class PlayerMovement : MonoBehaviour
     
     IEnumerator StartSneak()
     {
-        if (_isSneaking) {
-            while (sneakTimeCounter > 0 )
+        if (_isSneaking && Input.GetButtonDown("Sneak") && sneakTimeCounter > 0)
+        {
+            while (sneakTimeCounter > 0 && _isSneaking)
             {
                 sneakTimeCounter--;
-                yield return new WaitForSeconds(10);
+                yield return new WaitForSeconds(1);
             }
         }
-        
     }
     
     IEnumerator RechargeSneak()
