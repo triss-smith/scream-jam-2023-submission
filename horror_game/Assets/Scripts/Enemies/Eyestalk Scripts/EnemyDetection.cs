@@ -24,16 +24,19 @@ public class EnemyDetection : MonoBehaviour
     private void Update()
     {
         // Check if the player is within the detection radius
-
+        
+        Vector2 originalEnemyDetectionCollider = _playerMovement.enemyDetectionCollider.GetComponent<CapsuleCollider2D>().size;
         if (_aiPlayerDetector.playerDetected && !_playerMovement._isSneaking)
         {
             // Handle what happens when the player is detected (e.g., attack, chase, etc.)
             myAnimator.SetBool("isDetected", true);
+            // _playerMovement.ChangeDetectionColliderSize(40f, 40f);
             enemySpotlight.SetActive(true);
             Debug.Log("Player detected!");
         }
         else
         {
+            // _playerMovement.ChangeDetectionColliderSize(1f, 3f);
             myAnimator.SetBool("isDetected", false);
             enemySpotlight.SetActive(false);
         }
