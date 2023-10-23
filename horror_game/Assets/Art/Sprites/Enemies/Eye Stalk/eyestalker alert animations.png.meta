@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3dcab0b6c74702a469f5445902a42a06
+guid: eec23a24784a7a440af78c9090a5200c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,85 +136,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sj_eyestalkers_downsprite-Sheet_0
+      name: eyestalker alert animations_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 0
-        width: 211
-        height: 183
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        x: 0
+        y: 500
+        width: 260
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0be170fe5c892a54c8a635adefb41f2d
-      internalID: -2123148057
+      spriteID: 36403cd280738774083f17fb64c99f9d
+      internalID: 1026371489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sj_eyestalkers_downsprite-Sheet_1
+      name: eyestalker alert animations_1
       rect:
         serializedVersion: 2
-        x: 234
-        y: 0
-        width: 400
-        height: 182
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        x: 241
+        y: 500
+        width: 260
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd709ee06548e4e4ead8325d672fd00a
-      internalID: -994673707
+      spriteID: f7cbd743ca962f34e87efdc7968d5966
+      internalID: -80694832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sj_eyestalkers_downsprite-Sheet_2
+      name: eyestalker alert animations_2
       rect:
         serializedVersion: 2
-        x: 669
-        y: 10
-        width: 196
-        height: 181
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        x: 488
+        y: 500
+        width: 260
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c9ddf4fc17d5af4f9e043e8082a7752
-      internalID: 708696855
+      spriteID: 08b77224b322284429c3a692aacef2ac
+      internalID: 1440720291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sj_eyestalkers_downsprite-Sheet_3
+      name: eyestalker alert animations_3
       rect:
         serializedVersion: 2
-        x: 905
-        y: 0
-        width: 190
-        height: 181
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        x: 747
+        y: 500
+        width: 260
+        height: 500
+      alignment: 9
+      pivot: {x: 0.48645115, y: 0.49999988}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb70dc0ec8072ed46928e782161121c2
-      internalID: -1963059668
+      spriteID: f2fed7aac803cc2469623c328117f1bc
+      internalID: -180793175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eyestalker alert animations_4
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 500
+        width: 260
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d2ac1fa80542d40807abf4865723ce
+      internalID: -1269681618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eyestalker alert animations_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 260
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862e219c8d1c7dc47890abf5fac7da64
+      internalID: 1616288196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eyestalker alert animations_6
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 260
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e30016d5e06e547a009c6cf2c53e99
+      internalID: -1631383365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: eyestalker alert animations_7
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 260
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ac0c8582f19e14d89e811d7a26df14
+      internalID: -1012772800
       vertices: []
       indices: 
       edges: []
@@ -230,10 +314,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sj_eyestalkers_downsprite-Sheet_0: -2123148057
-      sj_eyestalkers_downsprite-Sheet_1: -994673707
-      sj_eyestalkers_downsprite-Sheet_2: 708696855
-      sj_eyestalkers_downsprite-Sheet_3: -1963059668
+      eyestalker alert animations_0: 1026371489
+      eyestalker alert animations_1: -80694832
+      eyestalker alert animations_2: 1440720291
+      eyestalker alert animations_3: -180793175
+      eyestalker alert animations_4: -1269681618
+      eyestalker alert animations_5: 1616288196
+      eyestalker alert animations_6: -1631383365
+      eyestalker alert animations_7: -1012772800
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -161,12 +161,12 @@ SpriteRenderer:
   m_SortingLayerID: 384032459
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2fa504ebd4cace442836d8ce62835756, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3eaa482c1ff41e44281778e14647e079, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.41, y: 2.01}
+  m_Size: {x: 3.765625, y: 3.140625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -235,8 +235,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.53, y: 4.9}
-    newSize: {x: 2.41, y: 2.01}
+    oldSize: {x: 3.765625, y: 3.140625}
+    newSize: {x: 3.765625, y: 3.140625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8645211287568276958}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67298559e135a8448879561bacde219c, type: 3}
   m_Name: 
@@ -271,9 +271,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <playerDetected>k__BackingField: 0
-  detectorSize: {x: 2.25, y: 2.2}
-  detectorOffset: {x: 0, y: 0}
-  detectionDelay: 0.3
+  detectorSize: {x: 3.29, y: 3.57}
+  detectorOffset: {x: 0, y: 0.73}
+  detectionDelay: 0.42
   detectionLayerMask:
     serializedVersion: 2
     m_Bits: 512

@@ -615,17 +615,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 384b4494e0b448746b8b2fb242f4e01b, type: 3}
---- !u!114 &1025557711 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5814284096710792309, guid: 384b4494e0b448746b8b2fb242f4e01b, type: 3}
-  m_PrefabInstance: {fileID: 1025557710}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1b07269656cf784a99bf8a4e3605d3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1090719308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -759,10 +748,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.9960785, g: 0.6784314, b: 0, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.40945306, b: 0, a: 1}
-    m_PressedColor: {r: 1, g: 0.11183077, b: 0, a: 1}
-    m_SelectedColor: {r: 1, g: 0.1137255, b: 0, a: 1}
+    m_NormalColor: {r: 0.574, g: 0.21180601, b: 0.38467124, a: 1}
+    m_HighlightedColor: {r: 0.23529413, g: 0, b: 0.23529413, a: 1}
+    m_PressedColor: {r: 0.120019235, g: 0.012726956, b: 0.20754719, a: 1}
+    m_SelectedColor: {r: 0.121568635, g: 0.011764707, b: 0.20784315, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -782,9 +771,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1025557711}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: LoadTutorial
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -960,10 +949,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.9960785, g: 0.6784314, b: 0, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.40945306, b: 0, a: 1}
-    m_PressedColor: {r: 1, g: 0.11183077, b: 0, a: 1}
-    m_SelectedColor: {r: 1, g: 0.1137255, b: 0, a: 1}
+    m_NormalColor: {r: 0.574, g: 0.21180601, b: 0.38467124, a: 1}
+    m_HighlightedColor: {r: 0.23529413, g: 0, b: 0.23529413, a: 1}
+    m_PressedColor: {r: 0.120019235, g: 0.012726956, b: 0.20754719, a: 1}
+    m_SelectedColor: {r: 0.121568635, g: 0.011764707, b: 0.20784315, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -983,9 +972,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1025557711}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
