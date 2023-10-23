@@ -55,9 +55,9 @@ public class PlayerMovement : MonoBehaviour
    
     void Update()
     {
-        Run();
+        // Run();
         relic.SetActive(_isSneaking);
-        enemyDetectionCollider.SetActive(true);
+        // enemyDetectionCollider.SetActive(true);
 
         if (sneakTimeCounter <= 0)
         {

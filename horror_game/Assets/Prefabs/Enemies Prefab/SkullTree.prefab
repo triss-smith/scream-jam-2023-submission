@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 384032459
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d5d68f435e358a3448781687ad84f238, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   detectionRange: 17
-  playerObject: {fileID: 0}
+  playerObject: {fileID: 3330713563523630136, guid: 665ad05744ba1e8439907138df2f35c0, type: 3}
 --- !u!68 &5057408187443731016
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
   showGizmos: 1
   isCube: 1
-  target: {fileID: 0}
+  target: {fileID: 3330713563523630136, guid: 665ad05744ba1e8439907138df2f35c0, type: 3}
 --- !u!114 &6591078263557077413
 MonoBehaviour:
   m_ObjectHideFlags: 0

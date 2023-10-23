@@ -30,13 +30,13 @@ public class EnemyDetection : MonoBehaviour
         {
             // Handle what happens when the player is detected (e.g., attack, chase, etc.)
             myAnimator.SetBool("isDetected", true);
-            _playerMovement.ChangeDetectionColliderSize(40f, 40f);
+            // _playerMovement.ChangeDetectionColliderSize(40f, 40f);
             enemySpotlight.SetActive(true);
             Debug.Log("Player detected!");
         }
         else
         {
-            _playerMovement.ChangeDetectionColliderSize(1f, 3f);
+            // _playerMovement.ChangeDetectionColliderSize(1f, 3f);
             myAnimator.SetBool("isDetected", false);
             enemySpotlight.SetActive(false);
         }
