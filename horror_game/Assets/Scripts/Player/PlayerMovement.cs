@@ -33,7 +33,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject enemyDetectionCollider;
 
     public GameObject GameOverObject;
-    public CapsuleCollider2D playerCollider;
+    private CapsuleCollider2D playerCollider;
+    
     
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
@@ -51,13 +52,12 @@ public class PlayerMovement : MonoBehaviour
         sneakTimeCounter = maxSneakDuration;
         playerCollider = GameOverObject.GetComponent<CapsuleCollider2D>();
     }
-
    
     void Update()
     {
         Run();
         relic.SetActive(_isSneaking);
-        enemyDetectionCollider.SetActive(true);
+        // enemyDetectionCollider.SetActive(true);
 
         if (sneakTimeCounter <= 0)
         {
@@ -155,6 +155,11 @@ public class PlayerMovement : MonoBehaviour
 
         _sneakIsRecharging = false;
         
+    }
+
+    public void ChangeDetectionColliderSize(float x, float y)
+    {
+        enemyDetectionCollider.GetComponent<CapsuleCollider2D>().size = new Vector3(x, y, 1);
     }
 
     void FixedUpdate() 

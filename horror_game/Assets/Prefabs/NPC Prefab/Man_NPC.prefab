@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1258639639158363133}
   - component: {fileID: 5632916030017058178}
   - component: {fileID: 5165578130688475010}
+  - component: {fileID: 8761018280225125311}
   m_Layer: 11
   m_Name: Man_NPC
   m_TagString: NPC
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4235091050708015230}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 24.24, y: -2.2, z: -0.7590621}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -170,3 +171,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8761018280225125311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235091050708015230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda4f66b3b2581246a27ea0cdec7de1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkingDistance: 1000
+  walkingSpeed: 3
+  detectionWidth: 78.9
+  detectionHeight: 61.52
