@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 74ac1486b65ac4b4e820175274cbb06f
+guid: f55ae78f6f224e5428b144db0682ff4c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mc_idle_0
+      name: main character walk_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 0
-        width: 124
-        height: 312
+        x: 0
+        y: 6
+        width: 149
+        height: 307
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,17 +150,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e6394db130d803458dfbb431a1b675f
-      internalID: 220640227
+      spriteID: 7c07a544c798c48429ec43a2b97d7254
+      internalID: -874290034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mc_idle_1
+      name: main character walk_1
       rect:
         serializedVersion: 2
-        x: 182
+        x: 181
         y: 0
         width: 124
         height: 313
@@ -171,8 +171,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cd80eb7e1982d24399f16c1aebc1634
-      internalID: -1357961693
+      spriteID: 8556d85b45d96f345b7756767cf3c696
+      internalID: 189192370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main character walk_2
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1
+        width: 143
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314961dacdb924340b14fc3b3499aa81
+      internalID: -1086066224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main character walk_3
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 0
+        width: 124
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22faa61759c7ec44baab18f746f5b3ae
+      internalID: 480364492
       vertices: []
       indices: 
       edges: []
@@ -188,8 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mc_idle_0: 220640227
-      mc_idle_1: -1357961693
+      main character walk_0: -874290034
+      main character walk_1: 189192370
+      main character walk_2: -1086066224
+      main character walk_3: 480364492
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

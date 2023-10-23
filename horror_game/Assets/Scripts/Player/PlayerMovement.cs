@@ -107,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
     {
         myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
         isJumping = true;
+        
         StartCoroutine(EndJump());
     }
 
@@ -115,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
         if (isJumping)
         {
             myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
+            myAnimator.SetBool("isJumping", true);
         }
     }
 
@@ -127,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
         isJumping = false;
+        myAnimator.SetBool("isJumping", false);
     }
     
     IEnumerator StartSneak()

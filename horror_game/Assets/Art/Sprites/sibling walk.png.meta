@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 74ac1486b65ac4b4e820175274cbb06f
+guid: 89342af4f5bea6f4a92fb3c7e9e65099
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mc_idle_0
+      name: sibling walk_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 0
-        width: 124
-        height: 312
+        x: 0
+        y: 3
+        width: 174
+        height: 371
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e6394db130d803458dfbb431a1b675f
-      internalID: 220640227
+      spriteID: ea57f689e7b444447a15082c48526bd3
+      internalID: 784431463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mc_idle_1
+      name: sibling walk_1
       rect:
         serializedVersion: 2
-        x: 182
+        x: 228
         y: 0
-        width: 124
-        height: 313
+        width: 161
+        height: 374
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,8 +171,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cd80eb7e1982d24399f16c1aebc1634
-      internalID: -1357961693
+      spriteID: 1bd840e02dda2fe438b9e84532187f43
+      internalID: -1282271165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sibling walk_2
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 2
+        width: 161
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4221a771b1e834ebad5963c30c6a6d
+      internalID: -823513035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sibling walk_3
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 0
+        width: 161
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9e2717d77e71046bae1eb7b5565609
+      internalID: 48340317
       vertices: []
       indices: 
       edges: []
@@ -188,8 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mc_idle_0: 220640227
-      mc_idle_1: -1357961693
+      sibling walk_0: 784431463
+      sibling walk_1: -1282271165
+      sibling walk_2: -823513035
+      sibling walk_3: 48340317
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

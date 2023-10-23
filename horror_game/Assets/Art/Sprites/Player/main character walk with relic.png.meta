@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5c5d58d0a242e1846a5d2a5ce5fb34ab
+guid: c7fde110b2c725f4fbc4eaadb3981eef
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: main character walk with relic_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 6
+        width: 204
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58746026ff9b75c46a4a48d43d163064
+      internalID: -1708586029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main character walk with relic_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 178
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5908501cdff0e0c4a94a630418732192
+      internalID: -1799697233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main character walk with relic_2
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1
+        width: 167
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f162459081655840a4f6e1305b661e5
+      internalID: 145523956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main character walk with relic_3
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 0
+        width: 178
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90775a33f52aad14eb242d4f1c4b1687
+      internalID: 393780909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +229,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      main character walk with relic_0: -1708586029
+      main character walk with relic_1: -1799697233
+      main character walk with relic_2: 145523956
+      main character walk with relic_3: 393780909
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
