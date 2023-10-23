@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject enemyDetectionCollider;
 
     public GameObject GameOverObject;
-    public CapsuleCollider2D playerCollider;
+    private CapsuleCollider2D playerCollider;
     
     
     Vector2 moveInput;
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
    
     void Update()
     {
-        // Run();
+        Run();
         relic.SetActive(_isSneaking);
         // enemyDetectionCollider.SetActive(true);
 

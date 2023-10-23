@@ -263,7 +263,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 2176
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -347,12 +347,12 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3330713563523630136}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 3983dbb6baf5a3f46909e7695cdfdadd, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -405,7 +405,6 @@ MonoBehaviour:
   sneakTimeCounter: 0
   enemyDetectionCollider: {fileID: 1983138695270708873}
   GameOverObject: {fileID: 1267157831977671949}
-  playerCollider: {fileID: 0}
 --- !u!1 &4286991284623803631
 GameObject:
   m_ObjectHideFlags: 0
