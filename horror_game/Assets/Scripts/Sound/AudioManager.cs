@@ -16,17 +16,20 @@ public class AudioManager : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject);
         }
     }
 
     private void Start()
     {
         PlayMusic(currentMusic);
+    }
+
+    public void onDestroy()
+    {
+        StopMusic(currentMusic);
     }
     
     public void PlayMusic(string name)
@@ -41,6 +44,21 @@ public class AudioManager : MonoBehaviour
         {
             musicSource.clip = s.clip;
             musicSource.Play();
+        }
+    }
+    
+    public void StopMusic(string name)
+    {
+        Sound s = Array.Find(musicSounds, x => x.name == name);
+        
+        if(s == null)
+        {
+            Debug.Log("Sound Not Found");
+        }
+        else
+        {
+            musicSource.clip = s.clip;
+            musicSource.Stop();
         }
     }
 

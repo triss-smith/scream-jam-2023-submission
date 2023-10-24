@@ -416,7 +416,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2f401bfad8bce9d42b2ce73e1ba82ceb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a10bdec0dd2f89846869ad0edd18e574, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Intensity: 5.66
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: e3129c41b5f92d0567a8b444000000004573652e81c9e951dff294dcab07d5bb99fd136bcbdee316b37f4caf
+  m_ApplyToSortingLayers: b5f92d0567a8b444000000004573652e81c9e951dff294dcab07d5bb99fd136bcbdee316
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
