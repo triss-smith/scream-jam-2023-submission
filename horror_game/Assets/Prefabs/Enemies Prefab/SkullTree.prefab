@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5057408187443731016}
   - component: {fileID: 923753607106883379}
   - component: {fileID: 6591078263557077413}
+  - component: {fileID: 1356041432209190437}
   m_Layer: 7
   m_Name: SkullTree
   m_TagString: Enemy
@@ -130,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   detectionRange: 17
-  playerObject: {fileID: 3330713563523630136, guid: 665ad05744ba1e8439907138df2f35c0, type: 3}
+  playerObject: {fileID: 0}
 --- !u!68 &5057408187443731016
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -190,12 +191,12 @@ MonoBehaviour:
   detectionDelay: 0.3
   detectionLayerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   gizmoIdleColor: {r: 0, g: 1, b: 0, a: 0.08627451}
   gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
   showGizmos: 1
   isCube: 1
-  target: {fileID: 3330713563523630136, guid: 665ad05744ba1e8439907138df2f35c0, type: 3}
+  target: {fileID: 0}
 --- !u!114 &6591078263557077413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,3 +221,24 @@ MonoBehaviour:
   showGizmos: 0
   isCube: 1
   target: {fileID: 3330713563523630136, guid: 665ad05744ba1e8439907138df2f35c0, type: 3}
+--- !u!95 &1356041432209190437
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3944071221754018391}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 38ea882935b974748b476c3eea753fae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
