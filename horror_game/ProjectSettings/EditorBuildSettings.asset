@@ -9,14 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 967726da23a19c24d87609f3687f13f0
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: e998604e2e759054faf1ee77f96a7200
-  - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
+    path: Assets/Scenes/TutorialTown.unity
     guid: cc4caca40e5765b45b051fb6a7260141
+  - enabled: 1
+    path: Assets/Scenes/TutorialTemple.unity
+    guid: 40be809a664373349a61f9371db6933d
   - enabled: 1
     path: Assets/Scenes/TheMeat.unity
     guid: c414a7a00f0081e4f8eb1a4ddd9941e0
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: e998604e2e759054faf1ee77f96a7200
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 2b3c9479cd3289c4b98eb5d3846ab8d6
