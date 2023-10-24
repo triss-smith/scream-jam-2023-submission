@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 4299275587496819895}
   - component: {fileID: 1905928845590914805}
   - component: {fileID: 3446489768810988288}
-  - component: {fileID: 4714527582335218870}
   - component: {fileID: 1435421193397259866}
+  - component: {fileID: 3965032196264564592}
   m_Layer: 0
   m_Name: SibMonster
   m_TagString: Untagged
@@ -64,7 +64,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!212 &6430003057153658640
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <playerDetected>k__BackingField: 0
-  detectorSize: {x: 13.5, y: 4.47}
+  detectorSize: {x: 25, y: 25}
   detectorOffset: {x: 0, y: 0}
   detectionDelay: 0.36
   detectionLayerMask:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a89de2c84a62d468f6d5ede1a88443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 10.67
+  detectionRange: 50
   followSpeed: 5
 --- !u!114 &3446489768810988288
 MonoBehaviour:
@@ -179,27 +179,6 @@ MonoBehaviour:
   showGizmos: 1
   isCube: 1
   target: {fileID: 3330713563523630136, guid: 665ad05744ba1e8439907138df2f35c0, type: 3}
---- !u!95 &4714527582335218870
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878696298808509549}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 12a17f4f5d63bce4ca96216a7b57f9a2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!70 &1435421193397259866
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -235,3 +214,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.31}
   m_Size: {x: 0.52, y: 3.25}
   m_Direction: 0
+--- !u!95 &3965032196264564592
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878696298808509549}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 12a17f4f5d63bce4ca96216a7b57f9a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

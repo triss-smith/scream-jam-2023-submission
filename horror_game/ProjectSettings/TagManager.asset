@@ -56,6 +56,9 @@ TagManager:
   - name: Background_1
     uniqueID: 1152690279
     locked: 0
+  - name: TempleBack
+    uniqueID: 2031226373
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: platform tiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e1de632f224ff4893f9164a7d6b37b
+      internalID: 1797757006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform tiles_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d80eebe35744045a1be394668bb430
+      internalID: 1983638252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform tiles_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5664945c852d44eaff2d8a4e258e8e
+      internalID: -873667996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform tiles_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6da63d575bf2e24d864ce3eb40f77d6
+      internalID: -614256655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform tiles_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb806ac2702ecd4a8df8e3fad11b668
+      internalID: -2101247854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform tiles_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d22ff06d6ad0a49b6adbd15b35efbc
+      internalID: -1527096765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform tiles_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47448ee8e56690d479d709f5f59c8119
+      internalID: 215775870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform tiles_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01b30e3d5d0b474c83f1885dbb36bc0
+      internalID: -1363220013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform tiles_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a6b7fc0da97d849b71e4c47dd5f035
+      internalID: -894823717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform tiles_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2399300a93aef0f43925e40238e7408f
+      internalID: 571246519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform tiles_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8158a79e51ea345b4127d69485e2e0
+      internalID: 479326701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform tiles_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29afb4f624a556469b458ea1c39df1d
+      internalID: -1818062998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform tiles_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5dd4300bc6c5f4aa3ea1c8cc7ebf74
+      internalID: -1974604229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform tiles_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b8d6196bf028045a270f553acd1bc3
+      internalID: 1688659571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: platform tiles_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86b306e3c4f928438b31089bc995164
+      internalID: -1140317658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +460,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      platform tiles_0: 1797757006
+      platform tiles_1: 1983638252
+      platform tiles_10: 479326701
+      platform tiles_11: -1818062998
+      platform tiles_12: -1974604229
+      platform tiles_13: 1688659571
+      platform tiles_14: -1140317658
+      platform tiles_2: -873667996
+      platform tiles_3: -614256655
+      platform tiles_4: -2101247854
+      platform tiles_5: -1527096765
+      platform tiles_6: 215775870
+      platform tiles_7: -1363220013
+      platform tiles_8: -894823717
+      platform tiles_9: 571246519
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
