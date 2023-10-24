@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     Animator myAnimator;
     CapsuleCollider2D myCapsuleCollider;
     CircleCollider2D myCircleCollider;
+    private AudioSource walkingAudio;
     
   
     void Start()
@@ -51,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
         myCircleCollider = GetComponent<CircleCollider2D>();
         sneakTimeCounter = maxSneakDuration;
         playerCollider = GameOverObject.GetComponent<CapsuleCollider2D>();
+        walkingAudio = GetComponent<AudioSource>();
     }
    
     void Update()
@@ -179,6 +181,18 @@ public class PlayerMovement : MonoBehaviour
         float moveSpeedX = (_isSneaking ? sneakSpeed : runSpeed) * moveInputX;
 
         myRigidbody.velocity = new Vector2(moveSpeedX, myRigidbody.velocity.y);
+        if (Mathf.Abs(myRigidbody.velocity.x) > 0.5f && _isGrounded && !_isSneaking)
+        {
+            if (_isGrounded)
+            {
+               walkingAudio.enabled = true;// Play the run sound when the player is running
+            }
+        }
+        else
+        {
+            walkingAudio.enabled = false;
+        }
+        
 
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
         myAnimator.SetBool("isRunning", playerHasHorizontalSpeed);

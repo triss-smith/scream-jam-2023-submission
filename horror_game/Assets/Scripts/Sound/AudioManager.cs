@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        PlayMusic("Da Spooky");
+        PlayMusic("Forest");
     }
     
     public void PlayMusic(string name)
@@ -46,14 +46,25 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(string name)
     {
         Sound s = Array.Find(sfxSounds, x => x.name == name);
-        
+        Debug.Log(sfxSounds[0].name);
         if(s == null)
         {
             Debug.Log("Sound Not Found");
         }
         else
         {
-            sfxSource.PlayOneShot(s.clip);
+            sfxSource.clip = s.clip;
+            if (!sfxSource.isPlaying)
+            {
+                
+                sfxSource.PlayOneShot(s.clip);
+            } 
+            else if (sfxSource.isPlaying)
+            {
+                sfxSource.Stop();
+                
+                sfxSource.PlayOneShot(s.clip);
+            }
         }
     }
 
