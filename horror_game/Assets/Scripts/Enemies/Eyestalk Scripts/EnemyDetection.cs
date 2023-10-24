@@ -29,7 +29,7 @@ public class EnemyDetection : MonoBehaviour
         if (_aiPlayerDetector.playerDetected && !_playerMovement._isSneaking)
         {
             // Handle what happens when the player is detected (e.g., attack, chase, etc.)
-            myAnimator.SetBool("isDetected", true);
+            myAnimator.SetBool("isCaught", true);
             // _playerMovement.ChangeDetectionColliderSize(40f, 40f);
             enemySpotlight.SetActive(true);
             Debug.Log("Player detected!");
