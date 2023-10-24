@@ -975,19 +975,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3912617984144297805, guid: 93e836cf53543b247b4d5301cf9ee5e7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.1230123
+      value: 3.18
       objectReference: {fileID: 0}
     - target: {fileID: 3912617984144297805, guid: 93e836cf53543b247b4d5301cf9ee5e7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0717986
+      value: 1.76
       objectReference: {fileID: 0}
     - target: {fileID: 3912617984144297805, guid: 93e836cf53543b247b4d5301cf9ee5e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.1961
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 3912617984144297805, guid: 93e836cf53543b247b4d5301cf9ee5e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.6038
+      value: 13.5
       objectReference: {fileID: 0}
     - target: {fileID: 4498272189602665564, guid: 93e836cf53543b247b4d5301cf9ee5e7, type: 3}
       propertyPath: m_Sprite
@@ -1023,7 +1023,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c5c06aac36202cf4fa1b408197be6bd5, type: 3}
     - target: {fileID: 5765831412659840190, guid: 93e836cf53543b247b4d5301cf9ee5e7, type: 3}
       propertyPath: m_DrawMode
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5765831412659840190, guid: 93e836cf53543b247b4d5301cf9ee5e7, type: 3}
       propertyPath: m_SpriteTileMode
