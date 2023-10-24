@@ -178,7 +178,7 @@ MonoBehaviour:
   - name: Forest
     clip: {fileID: 8300000, guid: 0aa278eda8621e644bf2b13a2f5f3cbf, type: 3}
   - name: Temple
-    clip: {fileID: 8300000, guid: 90a6f7406c33a8b49ab94c9595b2137d, type: 3}
+    clip: {fileID: 8300000, guid: 0aa278eda8621e644bf2b13a2f5f3cbf, type: 3}
   - name: Main
     clip: {fileID: 8300000, guid: b0f59bca88874194289a2c6045aafb87, type: 3}
   sfxSounds:

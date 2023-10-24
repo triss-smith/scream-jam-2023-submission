@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
 
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
+    public string currentMusic;
 
     private void Awake()
     {
@@ -25,7 +26,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        PlayMusic("Forest");
+        PlayMusic(currentMusic);
     }
     
     public void PlayMusic(string name)
