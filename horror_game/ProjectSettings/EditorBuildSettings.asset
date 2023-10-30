@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 967726da23a19c24d87609f3687f13f0
   - enabled: 1
-    path: Assets/Scenes/Test Scenes/MichaelTest.unity
+    path: Assets/Scenes/TheMeat.unity
     guid: c12a049bd4b23b745a2694ae9811fd52
   - enabled: 1
     path: Assets/Scenes/Credits.unity
